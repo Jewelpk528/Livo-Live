@@ -1,0 +1,11 @@
+{
+  "name": "Livo Live",
+  "description": "A premium social live streaming and video calling platform. Experience interactive live streams, virtual gift animations, video calls, a TikTok-style feed, and an admin control panel.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
