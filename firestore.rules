@@ -1,0 +1,50 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Global Safety Net (default-deny catch-all)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    
+    // Global helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+    
+    // Validates a RoomImage object structure inside firestore
+    function isValidRoomImage(img) {
+      return img.imageUrl is string && img.imageUrl.size() <= 1024
+          && img.uploadedAt is string && img.uploadedAt.size() <= 64;
+    }
+    
+    // Validates BackgroundMusicState structure inside firestore
+    function isValidBackgroundMusic(music) {
+      return music.fileName is string && music.fileName.size() <= 256
+          && music.audioUrl is string && music.audioUrl.size() <= 1024
+          && music.duration is number
+          && music.isPlaying is bool
+          && music.loop is bool;
+    }
+    
+    // Rules for Live Rooms collection
+    match /live_rooms/{roomId} {
+      allow read: if isSignedIn() && isValidId(roomId);
+      
+      // Allow host or moderator write operations
+      allow write: if isSignedIn() && isValidId(roomId)
+        && (request.resource.data.images == null || request.resource.data.images.size() <= 10)
+        && (request.resource.data.backgroundMusic == null || isValidBackgroundMusic(request.resource.data.backgroundMusic));
+    }
+    
+    // Rules for Demo Users collection
+    match /demo_users/{userId} {
+      allow read: if isSignedIn() && isValidId(userId);
+      allow write: if isSignedIn() && isValidId(userId);
+    }
+  }
+}

@@ -1,0 +1,6059 @@
+/**
+ * src/demoUsers.ts
+ * Auto-generated list of 100 fully detailed demo creators.
+ */
+
+export interface DemoUserProfile {
+  userId: string;
+  username: string;
+  displayName: string;
+  gender: 'male' | 'female' | 'other';
+  age: number;
+  country: string;
+  city: string;
+  language: string;
+  shortBio: string;
+  occupation: string;
+  relationshipStatus: string;
+  joinDate: string;
+  verificationStatus: string;
+  vipStatus: string;
+  level: number;
+  followers: number;
+  following: number;
+  friends: number;
+  coinsBalance: number;
+  diamondsBalance: number;
+  totalGiftsReceived: number;
+  totalGiftsSent: number;
+  totalLiveHours: number;
+  totalVideoCalls: number;
+  profilePhotoUrl: string;
+  coverPhotoUrl: string;
+}
+
+export interface DemoUserMedia {
+  photoTitles: string[];
+  videoTitles: string[];
+}
+
+export interface DemoLiveRoom {
+  roomId: string;
+  roomName: string;
+  roomCategory: string;
+  roomDescription: string;
+  currentStatus: 'Live' | 'Offline';
+  roomLevel: number;
+  totalViewers: number;
+  totalFollowers: number;
+  topGiftReceived: string;
+  popularTags: string[];
+}
+
+export interface DemoUserAccount {
+  profile: DemoUserProfile;
+  media: DemoUserMedia;
+  liveRoom: DemoLiveRoom;
+}
+
+export const DEMO_CREATORS: DemoUserAccount[] = [
+  {
+    "profile": {
+      "userId": "LV100001",
+      "username": "mehzabin_chowdhury_livo",
+      "displayName": "Mehzabin Chowdhury",
+      "gender": "female",
+      "age": 20,
+      "country": "Bangladesh",
+      "city": "Dhaka",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Dhaka. Catch me live streaming Music daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Music Student",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-07-24",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 38,
+      "followers": 47611,
+      "following": 224,
+      "friends": 187,
+      "coinsBalance": 2799,
+      "diamondsBalance": 31605,
+      "totalGiftsReceived": 101395,
+      "totalGiftsSent": 13336,
+      "totalLiveHours": 527,
+      "totalVideoCalls": 121,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1615243468525-a131a37c4e5c?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Dhaka",
+        "Behind the scenes of Music stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100001",
+      "roomName": "Guitar Acoustics 🎸",
+      "roomCategory": "Music",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Music from Dhaka, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 25,
+      "totalViewers": 0,
+      "totalFollowers": 36623,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "Music",
+        "Bangladesh",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100002",
+      "username": "sabila_nur_livo",
+      "displayName": "Sabila Nur",
+      "gender": "female",
+      "age": 22,
+      "country": "Bangladesh",
+      "city": "Chittagong",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Chittagong. Catch me live streaming Singing daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Guitarist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2024-11-06",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 17,
+      "followers": 86815,
+      "following": 312,
+      "friends": 92,
+      "coinsBalance": 13938,
+      "diamondsBalance": 81682,
+      "totalGiftsReceived": 81333,
+      "totalGiftsSent": 15218,
+      "totalLiveHours": 200,
+      "totalVideoCalls": 225,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1618015358954-115ef1ed6515?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Chittagong",
+        "Behind the scenes of Singing stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100002",
+      "roomName": "Sufi & Ghazal Nights 🎤",
+      "roomCategory": "Singing",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Singing from Chittagong, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 11,
+      "totalViewers": 0,
+      "totalFollowers": 66780,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Singing",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100003",
+      "username": "tanjin_tisha_livo",
+      "displayName": "Tanjin Tisha",
+      "gender": "female",
+      "age": 21,
+      "country": "Bangladesh",
+      "city": "Sylhet",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Sylhet. Catch me live streaming Gaming daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Fashion Model",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-12-25",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 25,
+      "followers": 69627,
+      "following": 239,
+      "friends": 291,
+      "coinsBalance": 1798,
+      "diamondsBalance": 44194,
+      "totalGiftsReceived": 91715,
+      "totalGiftsSent": 8036,
+      "totalLiveHours": 450,
+      "totalVideoCalls": 296,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1605980776566-0486c3ac7617?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1630156984285-d60927a7c933?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Sylhet",
+        "Behind the scenes of Gaming stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100003",
+      "roomName": "Cozy Gaming Lounge 👾",
+      "roomCategory": "Gaming",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Gaming from Sylhet, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 16,
+      "totalViewers": 0,
+      "totalFollowers": 53559,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "Gaming",
+        "Bangladesh",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100004",
+      "username": "nusrat_faria_livo",
+      "displayName": "Nusrat Faria",
+      "gender": "female",
+      "age": 19,
+      "country": "Bangladesh",
+      "city": "Khulna",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Khulna. Catch me live streaming Ludo daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "University Student",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-10-01",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 15,
+      "followers": 29028,
+      "following": 160,
+      "friends": 216,
+      "coinsBalance": 12987,
+      "diamondsBalance": 21226,
+      "totalGiftsReceived": 96796,
+      "totalGiftsSent": 14956,
+      "totalLiveHours": 345,
+      "totalVideoCalls": 107,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Khulna",
+        "Behind the scenes of Ludo stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100004",
+      "roomName": "🎲 Ludo Madness",
+      "roomCategory": "Ludo",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Ludo from Khulna, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 10,
+      "totalViewers": 0,
+      "totalFollowers": 22329,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Ludo",
+        "Bangladesh",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100005",
+      "username": "tasnia_farin_livo",
+      "displayName": "Tasnia Farin",
+      "gender": "female",
+      "age": 25,
+      "country": "Bangladesh",
+      "city": "Rajshahi",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Rajshahi. Catch me live streaming PUBG daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Dance Instructor",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-03-22",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 39,
+      "followers": 72916,
+      "following": 344,
+      "friends": 165,
+      "coinsBalance": 6787,
+      "diamondsBalance": 69489,
+      "totalGiftsReceived": 100882,
+      "totalGiftsSent": 10808,
+      "totalLiveHours": 459,
+      "totalVideoCalls": 252,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1620932934088-fbdb2920e484?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1604004555489-723a93d6ce74?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Rajshahi",
+        "Behind the scenes of PUBG stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100005",
+      "roomName": "PUBG Pro Rush Game 🔫",
+      "roomCategory": "PUBG",
+      "roomDescription": "Welcome to my Livo Live space! Streaming PUBG from Rajshahi, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 26,
+      "totalViewers": 507,
+      "totalFollowers": 56089,
+      "topGiftReceived": "Rocket Launch",
+      "popularTags": [
+        "PUBG",
+        "Bangladesh",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100006",
+      "username": "purnima_roy_livo",
+      "displayName": "Purnima Roy",
+      "gender": "female",
+      "age": 25,
+      "country": "Bangladesh",
+      "city": "Barisal",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Barisal. Catch me live streaming Free Fire daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Professional Gamer",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-02-24",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 21,
+      "followers": 53848,
+      "following": 233,
+      "friends": 260,
+      "coinsBalance": 13349,
+      "diamondsBalance": 51274,
+      "totalGiftsReceived": 38933,
+      "totalGiftsSent": 8499,
+      "totalLiveHours": 582,
+      "totalVideoCalls": 53,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1596215143922-eedeaba0d91c?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Barisal",
+        "Behind the scenes of Free Fire stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100006",
+      "roomName": "Diamond Giveaway Match!",
+      "roomCategory": "Free Fire",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Free Fire from Barisal, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 14,
+      "totalViewers": 309,
+      "totalFollowers": 41421,
+      "topGiftReceived": "Diamond Ring",
+      "popularTags": [
+        "Free Fire",
+        "Bangladesh",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100007",
+      "username": "apu_biswas_livo",
+      "displayName": "Apu Biswas",
+      "gender": "female",
+      "age": 21,
+      "country": "Bangladesh",
+      "city": "Cox's Bazar",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Cox's Bazar. Catch me live streaming Lifestyle daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Digital Artist",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-01-15",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 43,
+      "followers": 43813,
+      "following": 338,
+      "friends": 254,
+      "coinsBalance": 7319,
+      "diamondsBalance": 49509,
+      "totalGiftsReceived": 61656,
+      "totalGiftsSent": 11854,
+      "totalLiveHours": 273,
+      "totalVideoCalls": 98,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1618015358954-115ef1ed6515?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Cox's Bazar",
+        "Behind the scenes of Lifestyle stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100007",
+      "roomName": "Daily Skincare & Chitchat 💄",
+      "roomCategory": "Lifestyle",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Lifestyle from Cox's Bazar, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 28,
+      "totalViewers": 868,
+      "totalFollowers": 33702,
+      "topGiftReceived": "Rose Shower",
+      "popularTags": [
+        "Lifestyle",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100008",
+      "username": "safa_kabir_livo",
+      "displayName": "Safa Kabir",
+      "gender": "female",
+      "age": 23,
+      "country": "Bangladesh",
+      "city": "Comilla",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Comilla. Catch me live streaming Travel daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Social Media Manager",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-03-26",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 38,
+      "followers": 72861,
+      "following": 176,
+      "friends": 271,
+      "coinsBalance": 9611,
+      "diamondsBalance": 59345,
+      "totalGiftsReceived": 73165,
+      "totalGiftsSent": 15139,
+      "totalLiveHours": 408,
+      "totalVideoCalls": 136,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1604004555489-723a93d6ce74?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Comilla",
+        "Behind the scenes of Travel stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100008",
+      "roomName": "Backpacking Wonders",
+      "roomCategory": "Travel",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Travel from Comilla, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 25,
+      "totalViewers": 0,
+      "totalFollowers": 56046,
+      "topGiftReceived": "Heart Pulse",
+      "popularTags": [
+        "Travel",
+        "Bangladesh",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100009",
+      "username": "bidya_sinha_mim_livo",
+      "displayName": "Bidya Sinha Mim",
+      "gender": "female",
+      "age": 25,
+      "country": "Bangladesh",
+      "city": "Mymensingh",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Mymensingh. Catch me live streaming Cooking daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Travel Vlogger",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2024-04-08",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 23,
+      "followers": 59853,
+      "following": 140,
+      "friends": 70,
+      "coinsBalance": 14524,
+      "diamondsBalance": 78783,
+      "totalGiftsReceived": 70861,
+      "totalGiftsSent": 1920,
+      "totalLiveHours": 456,
+      "totalVideoCalls": 71,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Mymensingh",
+        "Behind the scenes of Cooking stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100009",
+      "roomName": "Secret Family Recipes 🍲",
+      "roomCategory": "Cooking",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Cooking from Mymensingh, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 15,
+      "totalViewers": 836,
+      "totalFollowers": 46040,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "Cooking",
+        "Bangladesh",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100010",
+      "username": "mumtaheena_toya_livo",
+      "displayName": "Mumtaheena Toya",
+      "gender": "female",
+      "age": 24,
+      "country": "Bangladesh",
+      "city": "Rangpur",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Rangpur. Catch me live streaming Education daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Yoga Instructor",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2024-07-04",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 45,
+      "followers": 55211,
+      "following": 341,
+      "friends": 71,
+      "coinsBalance": 14030,
+      "diamondsBalance": 32342,
+      "totalGiftsReceived": 47545,
+      "totalGiftsSent": 9590,
+      "totalLiveHours": 354,
+      "totalVideoCalls": 88,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1596215143922-eedeaba0d91c?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1601412436009-d964bd02edbc?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Rangpur",
+        "Behind the scenes of Education stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100010",
+      "roomName": "Tech & Coding Q&A 💻",
+      "roomCategory": "Education",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Education from Rangpur, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 30,
+      "totalViewers": 297,
+      "totalFollowers": 42470,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Education",
+        "Bangladesh",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100011",
+      "username": "shahtaj_monira_livo",
+      "displayName": "Shahtaj Monira",
+      "gender": "female",
+      "age": 26,
+      "country": "Bangladesh",
+      "city": "Dhaka",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Dhaka. Catch me live streaming Fitness daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Culinary Chef",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2025-07-22",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 28,
+      "followers": 44530,
+      "following": 197,
+      "friends": 127,
+      "coinsBalance": 7466,
+      "diamondsBalance": 39764,
+      "totalGiftsReceived": 96675,
+      "totalGiftsSent": 3039,
+      "totalLiveHours": 522,
+      "totalVideoCalls": 168,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1625897428517-7e2062829a26?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Dhaka",
+        "Behind the scenes of Fitness stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100011",
+      "roomName": "Pilates & Talk 🏃‍♀️",
+      "roomCategory": "Fitness",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Fitness from Dhaka, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 18,
+      "totalViewers": 124,
+      "totalFollowers": 34253,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "Fitness",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100012",
+      "username": "samia_athoi_livo",
+      "displayName": "Samia Athoi",
+      "gender": "female",
+      "age": 25,
+      "country": "Bangladesh",
+      "city": "Chittagong",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Chittagong. Catch me live streaming Comedy daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Language Teacher",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2024-03-23",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 20,
+      "followers": 91667,
+      "following": 199,
+      "friends": 152,
+      "coinsBalance": 10073,
+      "diamondsBalance": 35295,
+      "totalGiftsReceived": 20482,
+      "totalGiftsSent": 3071,
+      "totalLiveHours": 486,
+      "totalVideoCalls": 113,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1601412436009-d964bd02edbc?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1562088287-bde35a1ea917?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Chittagong",
+        "Behind the scenes of Comedy stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100012",
+      "roomName": "Guaranteed laughs 😂",
+      "roomCategory": "Comedy",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Comedy from Chittagong, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 13,
+      "totalViewers": 795,
+      "totalFollowers": 70513,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Comedy",
+        "Bangladesh",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100013",
+      "username": "keya_payel_livo",
+      "displayName": "Keya Payel",
+      "gender": "female",
+      "age": 23,
+      "country": "Bangladesh",
+      "city": "Sylhet",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Sylhet. Catch me live streaming Entertainment daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Comedian",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-09-08",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 28,
+      "followers": 23741,
+      "following": 147,
+      "friends": 238,
+      "coinsBalance": 5322,
+      "diamondsBalance": 40714,
+      "totalGiftsReceived": 11995,
+      "totalGiftsSent": 8790,
+      "totalLiveHours": 550,
+      "totalVideoCalls": 164,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Sylhet",
+        "Behind the scenes of Entertainment stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100013",
+      "roomName": "Truth or Dare ⚡",
+      "roomCategory": "Entertainment",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Entertainment from Sylhet, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 18,
+      "totalViewers": 417,
+      "totalFollowers": 18262,
+      "topGiftReceived": "Rocket Launch",
+      "popularTags": [
+        "Entertainment",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100014",
+      "username": "sunerah_binte_livo",
+      "displayName": "Sunerah Binte",
+      "gender": "female",
+      "age": 21,
+      "country": "Bangladesh",
+      "city": "Khulna",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Khulna. Catch me live streaming Talk Show daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Voice Artist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-04-02",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 41,
+      "followers": 35578,
+      "following": 232,
+      "friends": 289,
+      "coinsBalance": 14397,
+      "diamondsBalance": 53327,
+      "totalGiftsReceived": 22982,
+      "totalGiftsSent": 14393,
+      "totalLiveHours": 549,
+      "totalVideoCalls": 204,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1619380061814-58f03707f082?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Khulna",
+        "Behind the scenes of Talk Show stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100014",
+      "roomName": "Heart to Heart Advice ❤️",
+      "roomCategory": "Talk Show",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Talk Show from Khulna, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 27,
+      "totalViewers": 448,
+      "totalFollowers": 27367,
+      "topGiftReceived": "Diamond Ring",
+      "popularTags": [
+        "Talk Show",
+        "Bangladesh",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100015",
+      "username": "shahnaz_sumi_livo",
+      "displayName": "Shahnaz Sumi",
+      "gender": "female",
+      "age": 20,
+      "country": "Bangladesh",
+      "city": "Rajshahi",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Rajshahi. Catch me live streaming Music daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Radio Jockey",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-10-25",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 41,
+      "followers": 63187,
+      "following": 206,
+      "friends": 149,
+      "coinsBalance": 12130,
+      "diamondsBalance": 73165,
+      "totalGiftsReceived": 48204,
+      "totalGiftsSent": 1543,
+      "totalLiveHours": 433,
+      "totalVideoCalls": 52,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1617922001439-4a2e6501b337?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Rajshahi",
+        "Behind the scenes of Music stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100015",
+      "roomName": "Violin Grooves 🎻",
+      "roomCategory": "Music",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Music from Rajshahi, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 27,
+      "totalViewers": 0,
+      "totalFollowers": 48605,
+      "topGiftReceived": "Rose Shower",
+      "popularTags": [
+        "Music",
+        "Bangladesh",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100016",
+      "username": "mithila_sen_livo",
+      "displayName": "Mithila Sen",
+      "gender": "female",
+      "age": 23,
+      "country": "Bangladesh",
+      "city": "Barisal",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Barisal. Catch me live streaming Singing daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Freelance Writer",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-05-02",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 12,
+      "followers": 37521,
+      "following": 384,
+      "friends": 259,
+      "coinsBalance": 13273,
+      "diamondsBalance": 43647,
+      "totalGiftsReceived": 104262,
+      "totalGiftsSent": 6839,
+      "totalLiveHours": 289,
+      "totalVideoCalls": 336,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1619380061814-58f03707f082?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Barisal",
+        "Behind the scenes of Singing stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100016",
+      "roomName": "Singing Your Requests 🎙️",
+      "roomCategory": "Singing",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Singing from Barisal, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 8,
+      "totalViewers": 520,
+      "totalFollowers": 28862,
+      "topGiftReceived": "Heart Pulse",
+      "popularTags": [
+        "Singing",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100017",
+      "username": "puja_banik_livo",
+      "displayName": "Puja Banik",
+      "gender": "female",
+      "age": 25,
+      "country": "Bangladesh",
+      "city": "Cox's Bazar",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Cox's Bazar. Catch me live streaming Gaming daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Music Student",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-09-08",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 36,
+      "followers": 88713,
+      "following": 315,
+      "friends": 297,
+      "coinsBalance": 12366,
+      "diamondsBalance": 87231,
+      "totalGiftsReceived": 52173,
+      "totalGiftsSent": 5227,
+      "totalLiveHours": 557,
+      "totalVideoCalls": 264,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Cox's Bazar",
+        "Behind the scenes of Gaming stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100017",
+      "roomName": "Mobile Legends Mabar 🎮",
+      "roomCategory": "Gaming",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Gaming from Cox's Bazar, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 24,
+      "totalViewers": 127,
+      "totalFollowers": 68240,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "Gaming",
+        "Bangladesh",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100018",
+      "username": "farhana_islam_livo",
+      "displayName": "Farhana Islam",
+      "gender": "female",
+      "age": 26,
+      "country": "Bangladesh",
+      "city": "Comilla",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Comilla. Catch me live streaming Ludo daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Guitarist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2024-09-14",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 21,
+      "followers": 18281,
+      "following": 337,
+      "friends": 215,
+      "coinsBalance": 2162,
+      "diamondsBalance": 66332,
+      "totalGiftsReceived": 27398,
+      "totalGiftsSent": 7634,
+      "totalLiveHours": 360,
+      "totalVideoCalls": 106,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1598550476439-6847785fce6e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1588001291548-9111cb23d5df?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Comilla",
+        "Behind the scenes of Ludo stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100018",
+      "roomName": "Beat me and win 🪙!",
+      "roomCategory": "Ludo",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Ludo from Comilla, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 14,
+      "totalViewers": 440,
+      "totalFollowers": 14062,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Ludo",
+        "Bangladesh",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100019",
+      "username": "sadia_islam_livo",
+      "displayName": "Sadia Islam",
+      "gender": "female",
+      "age": 19,
+      "country": "Bangladesh",
+      "city": "Mymensingh",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Mymensingh. Catch me live streaming PUBG daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Fashion Model",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-02-10",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 34,
+      "followers": 88605,
+      "following": 149,
+      "friends": 133,
+      "coinsBalance": 4581,
+      "diamondsBalance": 77105,
+      "totalGiftsReceived": 55524,
+      "totalGiftsSent": 9865,
+      "totalLiveHours": 405,
+      "totalVideoCalls": 323,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1625897428517-7e2062829a26?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Mymensingh",
+        "Behind the scenes of PUBG stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100019",
+      "roomName": "PUBG Custom Rooms!",
+      "roomCategory": "PUBG",
+      "roomDescription": "Welcome to my Livo Live space! Streaming PUBG from Mymensingh, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 22,
+      "totalViewers": 0,
+      "totalFollowers": 68157,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "PUBG",
+        "Bangladesh",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100020",
+      "username": "tasnim_sultana_livo",
+      "displayName": "Tasnim Sultana",
+      "gender": "female",
+      "age": 26,
+      "country": "Bangladesh",
+      "city": "Rangpur",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Rangpur. Catch me live streaming Free Fire daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "University Student",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-11-19",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 32,
+      "followers": 68494,
+      "following": 248,
+      "friends": 264,
+      "coinsBalance": 3377,
+      "diamondsBalance": 72214,
+      "totalGiftsReceived": 82497,
+      "totalGiftsSent": 7328,
+      "totalLiveHours": 594,
+      "totalVideoCalls": 134,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1562088287-bde35a1ea917?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1589156223104-716d64d8a141?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Rangpur",
+        "Behind the scenes of Free Fire stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100020",
+      "roomName": "Free Fire Squad Up!",
+      "roomCategory": "Free Fire",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Free Fire from Rangpur, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 21,
+      "totalViewers": 694,
+      "totalFollowers": 52687,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Free Fire",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100021",
+      "username": "fariha_tasnim_livo",
+      "displayName": "Fariha Tasnim",
+      "gender": "female",
+      "age": 22,
+      "country": "Bangladesh",
+      "city": "Dhaka",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Dhaka. Catch me live streaming Lifestyle daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Dance Instructor",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-10-04",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 30,
+      "followers": 40705,
+      "following": 171,
+      "friends": 222,
+      "coinsBalance": 6350,
+      "diamondsBalance": 53649,
+      "totalGiftsReceived": 29117,
+      "totalGiftsSent": 12605,
+      "totalLiveHours": 407,
+      "totalVideoCalls": 307,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1578390432942-d5594bc01ec6?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Dhaka",
+        "Behind the scenes of Lifestyle stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100021",
+      "roomName": "Morning Chai & Talk ☕",
+      "roomCategory": "Lifestyle",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Lifestyle from Dhaka, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 20,
+      "totalViewers": 872,
+      "totalFollowers": 31311,
+      "topGiftReceived": "Rocket Launch",
+      "popularTags": [
+        "Lifestyle",
+        "Bangladesh",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100022",
+      "username": "jannatul_ferdous_livo",
+      "displayName": "Jannatul Ferdous",
+      "gender": "female",
+      "age": 21,
+      "country": "Bangladesh",
+      "city": "Chittagong",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Chittagong. Catch me live streaming Travel daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Professional Gamer",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-01-22",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 27,
+      "followers": 17985,
+      "following": 363,
+      "friends": 265,
+      "coinsBalance": 3994,
+      "diamondsBalance": 30779,
+      "totalGiftsReceived": 68422,
+      "totalGiftsSent": 4192,
+      "totalLiveHours": 460,
+      "totalVideoCalls": 98,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1630156984285-d60927a7c933?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1605369572399-05d8d64a0f6e?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Chittagong",
+        "Behind the scenes of Travel stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100022",
+      "roomName": "Beach Sunset Diaries 🌴",
+      "roomCategory": "Travel",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Travel from Chittagong, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 18,
+      "totalViewers": 511,
+      "totalFollowers": 13834,
+      "topGiftReceived": "Diamond Ring",
+      "popularTags": [
+        "Travel",
+        "Bangladesh",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100023",
+      "username": "sumaiya_akter_livo",
+      "displayName": "Sumaiya Akter",
+      "gender": "female",
+      "age": 20,
+      "country": "Bangladesh",
+      "city": "Sylhet",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Sylhet. Catch me live streaming Cooking daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Digital Artist",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-02-27",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 23,
+      "followers": 76302,
+      "following": 175,
+      "friends": 270,
+      "coinsBalance": 14472,
+      "diamondsBalance": 14028,
+      "totalGiftsReceived": 12097,
+      "totalGiftsSent": 10369,
+      "totalLiveHours": 523,
+      "totalVideoCalls": 90,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1605011933709-a78b59e3bc88?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1612994370726-5d4d609fca1b?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Sylhet",
+        "Behind the scenes of Cooking stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100023",
+      "roomName": "Baking Sweet Desserts 🍰",
+      "roomCategory": "Cooking",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Cooking from Sylhet, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 15,
+      "totalViewers": 610,
+      "totalFollowers": 58693,
+      "topGiftReceived": "Rose Shower",
+      "popularTags": [
+        "Cooking",
+        "Bangladesh",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100024",
+      "username": "nishat_jahan_livo",
+      "displayName": "Nishat Jahan",
+      "gender": "female",
+      "age": 20,
+      "country": "Bangladesh",
+      "city": "Khulna",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Khulna. Catch me live streaming Education daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Social Media Manager",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2024-05-12",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 41,
+      "followers": 72087,
+      "following": 278,
+      "friends": 187,
+      "coinsBalance": 6854,
+      "diamondsBalance": 25021,
+      "totalGiftsReceived": 36212,
+      "totalGiftsSent": 8702,
+      "totalLiveHours": 372,
+      "totalVideoCalls": 250,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1635488641537-b09c791fc37c?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Khulna",
+        "Behind the scenes of Education stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100024",
+      "roomName": "Speak tagging Tagalog/Urdu!",
+      "roomCategory": "Education",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Education from Khulna, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 27,
+      "totalViewers": 125,
+      "totalFollowers": 55451,
+      "topGiftReceived": "Heart Pulse",
+      "popularTags": [
+        "Education",
+        "Bangladesh",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100025",
+      "username": "afrin_sultana_livo",
+      "displayName": "Afrin Sultana",
+      "gender": "female",
+      "age": 20,
+      "country": "Bangladesh",
+      "city": "Rajshahi",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Rajshahi. Catch me live streaming Fitness daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Travel Vlogger",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2024-09-15",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 10,
+      "followers": 61862,
+      "following": 332,
+      "friends": 91,
+      "coinsBalance": 7542,
+      "diamondsBalance": 66306,
+      "totalGiftsReceived": 55614,
+      "totalGiftsSent": 13779,
+      "totalLiveHours": 545,
+      "totalVideoCalls": 129,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1588001291548-9111cb23d5df?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1611042553975-08733608b2db?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Rajshahi",
+        "Behind the scenes of Fitness stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100025",
+      "roomName": "Full Body Workout at Home 💪",
+      "roomCategory": "Fitness",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Fitness from Rajshahi, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 6,
+      "totalViewers": 638,
+      "totalFollowers": 47586,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "Fitness",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100026",
+      "username": "mim_akter_livo",
+      "displayName": "Mim Akter",
+      "gender": "female",
+      "age": 22,
+      "country": "Bangladesh",
+      "city": "Barisal",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Barisal. Catch me live streaming Comedy daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Yoga Instructor",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-11-20",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 38,
+      "followers": 88580,
+      "following": 232,
+      "friends": 260,
+      "coinsBalance": 5793,
+      "diamondsBalance": 41269,
+      "totalGiftsReceived": 13074,
+      "totalGiftsSent": 1152,
+      "totalLiveHours": 423,
+      "totalVideoCalls": 74,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Barisal",
+        "Behind the scenes of Comedy stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100026",
+      "roomName": "Do not laugh challenge!",
+      "roomCategory": "Comedy",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Comedy from Barisal, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 25,
+      "totalViewers": 635,
+      "totalFollowers": 68138,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Comedy",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100027",
+      "username": "rumana_ahmed_livo",
+      "displayName": "Rumana Ahmed",
+      "gender": "female",
+      "age": 21,
+      "country": "Bangladesh",
+      "city": "Cox's Bazar",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Cox's Bazar. Catch me live streaming Entertainment daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Culinary Chef",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-06-24",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 30,
+      "followers": 20575,
+      "following": 199,
+      "friends": 201,
+      "coinsBalance": 7802,
+      "diamondsBalance": 5881,
+      "totalGiftsReceived": 29310,
+      "totalGiftsSent": 11906,
+      "totalLiveHours": 447,
+      "totalVideoCalls": 271,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1589156223104-716d64d8a141?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Cox's Bazar",
+        "Behind the scenes of Entertainment stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100027",
+      "roomName": "Talent Show Lounge 🌟",
+      "roomCategory": "Entertainment",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Entertainment from Cox's Bazar, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 20,
+      "totalViewers": 0,
+      "totalFollowers": 15826,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "Entertainment",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100028",
+      "username": "shaila_yasmin_livo",
+      "displayName": "Shaila Yasmin",
+      "gender": "female",
+      "age": 22,
+      "country": "Bangladesh",
+      "city": "Comilla",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Comilla. Catch me live streaming Talk Show daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Language Teacher",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-08-15",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 33,
+      "followers": 93463,
+      "following": 389,
+      "friends": 293,
+      "coinsBalance": 1468,
+      "diamondsBalance": 41722,
+      "totalGiftsReceived": 29854,
+      "totalGiftsSent": 9599,
+      "totalLiveHours": 421,
+      "totalVideoCalls": 218,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1578390432942-d5594bc01ec6?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Comilla",
+        "Behind the scenes of Talk Show stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100028",
+      "roomName": "Your stories live 🎙️",
+      "roomCategory": "Talk Show",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Talk Show from Comilla, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 22,
+      "totalViewers": 184,
+      "totalFollowers": 71894,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Talk Show",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100029",
+      "username": "dilruba_khan_livo",
+      "displayName": "Dilruba Khan",
+      "gender": "female",
+      "age": 22,
+      "country": "Bangladesh",
+      "city": "Mymensingh",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Mymensingh. Catch me live streaming Music daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Comedian",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-12-21",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 33,
+      "followers": 65405,
+      "following": 348,
+      "friends": 284,
+      "coinsBalance": 12417,
+      "diamondsBalance": 62639,
+      "totalGiftsReceived": 94368,
+      "totalGiftsSent": 8102,
+      "totalLiveHours": 554,
+      "totalVideoCalls": 331,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1605369572399-05d8d64a0f6e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Mymensingh",
+        "Behind the scenes of Music stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100029",
+      "roomName": "Melody & Chill 🎹",
+      "roomCategory": "Music",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Music from Mymensingh, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 22,
+      "totalViewers": 0,
+      "totalFollowers": 50311,
+      "topGiftReceived": "Rocket Launch",
+      "popularTags": [
+        "Music",
+        "Bangladesh",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100030",
+      "username": "runa_laila_livo",
+      "displayName": "Runa Laila",
+      "gender": "female",
+      "age": 19,
+      "country": "Bangladesh",
+      "city": "Rangpur",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Rangpur. Catch me live streaming Singing daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Voice Artist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2024-05-10",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 31,
+      "followers": 35884,
+      "following": 146,
+      "friends": 224,
+      "coinsBalance": 15387,
+      "diamondsBalance": 37668,
+      "totalGiftsReceived": 66888,
+      "totalGiftsSent": 7581,
+      "totalLiveHours": 615,
+      "totalVideoCalls": 180,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1612994370726-5d4d609fca1b?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Rangpur",
+        "Behind the scenes of Singing stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100030",
+      "roomName": "Karaoke Chitchat 🌟",
+      "roomCategory": "Singing",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Singing from Rangpur, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 20,
+      "totalViewers": 672,
+      "totalFollowers": 27603,
+      "topGiftReceived": "Diamond Ring",
+      "popularTags": [
+        "Singing",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100031",
+      "username": "mehzabin_chowdhury_livo",
+      "displayName": "Mehzabin Chowdhury",
+      "gender": "female",
+      "age": 20,
+      "country": "Bangladesh",
+      "city": "Dhaka",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Dhaka. Catch me live streaming Gaming daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Radio Jockey",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-03-05",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 16,
+      "followers": 16285,
+      "following": 247,
+      "friends": 175,
+      "coinsBalance": 1903,
+      "diamondsBalance": 71948,
+      "totalGiftsReceived": 66172,
+      "totalGiftsSent": 15022,
+      "totalLiveHours": 450,
+      "totalVideoCalls": 108,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1635488641537-b09c791fc37c?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Dhaka",
+        "Behind the scenes of Gaming stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100031",
+      "roomName": "Cozy Gaming Lounge 👾",
+      "roomCategory": "Gaming",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Gaming from Dhaka, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 10,
+      "totalViewers": 867,
+      "totalFollowers": 12526,
+      "topGiftReceived": "Rose Shower",
+      "popularTags": [
+        "Gaming",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100032",
+      "username": "sabila_nur_livo",
+      "displayName": "Sabila Nur",
+      "gender": "female",
+      "age": 24,
+      "country": "Bangladesh",
+      "city": "Chittagong",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Chittagong. Catch me live streaming Ludo daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Freelance Writer",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2024-02-17",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 36,
+      "followers": 59754,
+      "following": 360,
+      "friends": 232,
+      "coinsBalance": 2210,
+      "diamondsBalance": 63404,
+      "totalGiftsReceived": 88375,
+      "totalGiftsSent": 3566,
+      "totalLiveHours": 142,
+      "totalVideoCalls": 89,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1611042553975-08733608b2db?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Chittagong",
+        "Behind the scenes of Ludo stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100032",
+      "roomName": "🎲 Ludo Madness",
+      "roomCategory": "Ludo",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Ludo from Chittagong, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 24,
+      "totalViewers": 132,
+      "totalFollowers": 45964,
+      "topGiftReceived": "Heart Pulse",
+      "popularTags": [
+        "Ludo",
+        "Bangladesh",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100033",
+      "username": "tanjin_tisha_livo",
+      "displayName": "Tanjin Tisha",
+      "gender": "female",
+      "age": 25,
+      "country": "Bangladesh",
+      "city": "Sylhet",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Sylhet. Catch me live streaming PUBG daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Music Student",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-09-24",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 38,
+      "followers": 76390,
+      "following": 332,
+      "friends": 240,
+      "coinsBalance": 2162,
+      "diamondsBalance": 17186,
+      "totalGiftsReceived": 14857,
+      "totalGiftsSent": 11328,
+      "totalLiveHours": 259,
+      "totalVideoCalls": 249,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1615243468525-a131a37c4e5c?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Sylhet",
+        "Behind the scenes of PUBG stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100033",
+      "roomName": "PUBG Pro Rush Game 🔫",
+      "roomCategory": "PUBG",
+      "roomDescription": "Welcome to my Livo Live space! Streaming PUBG from Sylhet, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 25,
+      "totalViewers": 427,
+      "totalFollowers": 58761,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "PUBG",
+        "Bangladesh",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100034",
+      "username": "nusrat_faria_livo",
+      "displayName": "Nusrat Faria",
+      "gender": "female",
+      "age": 24,
+      "country": "Bangladesh",
+      "city": "Khulna",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Khulna. Catch me live streaming Free Fire daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Guitarist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2024-08-07",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 32,
+      "followers": 35048,
+      "following": 359,
+      "friends": 54,
+      "coinsBalance": 11698,
+      "diamondsBalance": 37269,
+      "totalGiftsReceived": 43002,
+      "totalGiftsSent": 6182,
+      "totalLiveHours": 591,
+      "totalVideoCalls": 108,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1620932934088-fbdb2920e484?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Khulna",
+        "Behind the scenes of Free Fire stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100034",
+      "roomName": "Diamond Giveaway Match!",
+      "roomCategory": "Free Fire",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Free Fire from Khulna, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 21,
+      "totalViewers": 0,
+      "totalFollowers": 26960,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Free Fire",
+        "Bangladesh",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100035",
+      "username": "tasnia_farin_livo",
+      "displayName": "Tasnia Farin",
+      "gender": "female",
+      "age": 23,
+      "country": "Bangladesh",
+      "city": "Rajshahi",
+      "language": "Bengali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Rajshahi. Catch me live streaming Lifestyle daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Fashion Model",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-03-02",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 23,
+      "followers": 23583,
+      "following": 324,
+      "friends": 69,
+      "coinsBalance": 10267,
+      "diamondsBalance": 31774,
+      "totalGiftsReceived": 18674,
+      "totalGiftsSent": 2471,
+      "totalLiveHours": 408,
+      "totalVideoCalls": 324,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Rajshahi",
+        "Behind the scenes of Lifestyle stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100035",
+      "roomName": "Daily Skincare & Chitchat 💄",
+      "roomCategory": "Lifestyle",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Lifestyle from Rajshahi, Bangladesh. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 15,
+      "totalViewers": 0,
+      "totalFollowers": 18140,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "Lifestyle",
+        "Bangladesh",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100036",
+      "username": "priya_sharma_livo",
+      "displayName": "Priya Sharma",
+      "gender": "female",
+      "age": 24,
+      "country": "India",
+      "city": "Mumbai",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Mumbai. Catch me live streaming Travel daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "University Student",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-04-24",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 24,
+      "followers": 93635,
+      "following": 363,
+      "friends": 176,
+      "coinsBalance": 14027,
+      "diamondsBalance": 50854,
+      "totalGiftsReceived": 40754,
+      "totalGiftsSent": 5642,
+      "totalLiveHours": 307,
+      "totalVideoCalls": 218,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Mumbai",
+        "Behind the scenes of Travel stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100036",
+      "roomName": "Exploring Hidden Streets 🏔️",
+      "roomCategory": "Travel",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Travel from Mumbai, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 16,
+      "totalViewers": 0,
+      "totalFollowers": 72026,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Travel",
+        "India",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100037",
+      "username": "ananya_iyer_livo",
+      "displayName": "Ananya Iyer",
+      "gender": "female",
+      "age": 23,
+      "country": "India",
+      "city": "Delhi",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Delhi. Catch me live streaming Cooking daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Dance Instructor",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-01-08",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 34,
+      "followers": 83766,
+      "following": 251,
+      "friends": 252,
+      "coinsBalance": 4623,
+      "diamondsBalance": 37217,
+      "totalGiftsReceived": 74230,
+      "totalGiftsSent": 3712,
+      "totalLiveHours": 600,
+      "totalVideoCalls": 297,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Delhi",
+        "Behind the scenes of Cooking stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100037",
+      "roomName": "Late Night Mukbang 🍜",
+      "roomCategory": "Cooking",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Cooking from Delhi, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 22,
+      "totalViewers": 205,
+      "totalFollowers": 64435,
+      "topGiftReceived": "Rocket Launch",
+      "popularTags": [
+        "Cooking",
+        "India",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100038",
+      "username": "sneha_patel_livo",
+      "displayName": "Sneha Patel",
+      "gender": "female",
+      "age": 21,
+      "country": "India",
+      "city": "Kolkata",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Kolkata. Catch me live streaming Education daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Professional Gamer",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-11-04",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 32,
+      "followers": 32785,
+      "following": 396,
+      "friends": 60,
+      "coinsBalance": 7186,
+      "diamondsBalance": 24198,
+      "totalGiftsReceived": 27303,
+      "totalGiftsSent": 1693,
+      "totalLiveHours": 255,
+      "totalVideoCalls": 163,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1615243468525-a131a37c4e5c?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Kolkata",
+        "Behind the scenes of Education stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100038",
+      "roomName": "History & Mystery Talks",
+      "roomCategory": "Education",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Education from Kolkata, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 21,
+      "totalViewers": 0,
+      "totalFollowers": 25219,
+      "topGiftReceived": "Diamond Ring",
+      "popularTags": [
+        "Education",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100039",
+      "username": "aisha_khan_livo",
+      "displayName": "Aisha Khan",
+      "gender": "female",
+      "age": 22,
+      "country": "India",
+      "city": "Bangalore",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Bangalore. Catch me live streaming Fitness daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Digital Artist",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-12-27",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 37,
+      "followers": 20154,
+      "following": 122,
+      "friends": 122,
+      "coinsBalance": 7068,
+      "diamondsBalance": 50671,
+      "totalGiftsReceived": 33623,
+      "totalGiftsSent": 6126,
+      "totalLiveHours": 128,
+      "totalVideoCalls": 118,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Bangalore",
+        "Behind the scenes of Fitness stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100039",
+      "roomName": "Staying fit & positive!",
+      "roomCategory": "Fitness",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Fitness from Bangalore, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 24,
+      "totalViewers": 706,
+      "totalFollowers": 15503,
+      "topGiftReceived": "Rose Shower",
+      "popularTags": [
+        "Fitness",
+        "India",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100040",
+      "username": "diya_sen_livo",
+      "displayName": "Diya Sen",
+      "gender": "female",
+      "age": 24,
+      "country": "India",
+      "city": "Chennai",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Chennai. Catch me live streaming Comedy daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Social Media Manager",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2024-05-21",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 34,
+      "followers": 32140,
+      "following": 284,
+      "friends": 54,
+      "coinsBalance": 7116,
+      "diamondsBalance": 84093,
+      "totalGiftsReceived": 56232,
+      "totalGiftsSent": 4353,
+      "totalLiveHours": 159,
+      "totalVideoCalls": 341,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1630156984285-d60927a7c933?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Chennai",
+        "Behind the scenes of Comedy stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100040",
+      "roomName": "Mimicry & Pranks 😂",
+      "roomCategory": "Comedy",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Comedy from Chennai, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 22,
+      "totalViewers": 0,
+      "totalFollowers": 24723,
+      "topGiftReceived": "Heart Pulse",
+      "popularTags": [
+        "Comedy",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100041",
+      "username": "kavya_nair_livo",
+      "displayName": "Kavya Nair",
+      "gender": "female",
+      "age": 19,
+      "country": "India",
+      "city": "Hyderabad",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Hyderabad. Catch me live streaming Entertainment daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Travel Vlogger",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2024-06-10",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 26,
+      "followers": 23497,
+      "following": 224,
+      "friends": 262,
+      "coinsBalance": 10376,
+      "diamondsBalance": 41973,
+      "totalGiftsReceived": 36489,
+      "totalGiftsSent": 11509,
+      "totalLiveHours": 345,
+      "totalVideoCalls": 287,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Hyderabad",
+        "Behind the scenes of Entertainment stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100041",
+      "roomName": "PK Battles Back-to-Back 🥊",
+      "roomCategory": "Entertainment",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Entertainment from Hyderabad, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 17,
+      "totalViewers": 0,
+      "totalFollowers": 18074,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "Entertainment",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100042",
+      "username": "riya_chakraborty_livo",
+      "displayName": "Riya Chakraborty",
+      "gender": "female",
+      "age": 25,
+      "country": "India",
+      "city": "Pune",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Pune. Catch me live streaming Talk Show daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Yoga Instructor",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-04-09",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 23,
+      "followers": 59725,
+      "following": 222,
+      "friends": 259,
+      "coinsBalance": 3035,
+      "diamondsBalance": 46460,
+      "totalGiftsReceived": 64314,
+      "totalGiftsSent": 5304,
+      "totalLiveHours": 605,
+      "totalVideoCalls": 338,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1604004555489-723a93d6ce74?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Pune",
+        "Behind the scenes of Talk Show stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100042",
+      "roomName": "Dating Q&A & Gossip",
+      "roomCategory": "Talk Show",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Talk Show from Pune, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 15,
+      "totalViewers": 435,
+      "totalFollowers": 45942,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Talk Show",
+        "India",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100043",
+      "username": "neha_verma_livo",
+      "displayName": "Neha Verma",
+      "gender": "female",
+      "age": 21,
+      "country": "India",
+      "city": "Jaipur",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Jaipur. Catch me live streaming Music daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Culinary Chef",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-06-08",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 26,
+      "followers": 41287,
+      "following": 328,
+      "friends": 279,
+      "coinsBalance": 11425,
+      "diamondsBalance": 71853,
+      "totalGiftsReceived": 34886,
+      "totalGiftsSent": 11064,
+      "totalLiveHours": 415,
+      "totalVideoCalls": 310,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1596215143922-eedeaba0d91c?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Jaipur",
+        "Behind the scenes of Music stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100043",
+      "roomName": "Unplugged Pop Covers 🎼",
+      "roomCategory": "Music",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Music from Jaipur, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 17,
+      "totalViewers": 378,
+      "totalFollowers": 31759,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "Music",
+        "India",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100044",
+      "username": "shruti_gupta_livo",
+      "displayName": "Shruti Gupta",
+      "gender": "female",
+      "age": 20,
+      "country": "India",
+      "city": "Lucknow",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Lucknow. Catch me live streaming Singing daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Language Teacher",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-08-14",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 21,
+      "followers": 58634,
+      "following": 301,
+      "friends": 142,
+      "coinsBalance": 12567,
+      "diamondsBalance": 38187,
+      "totalGiftsReceived": 58853,
+      "totalGiftsSent": 9231,
+      "totalLiveHours": 403,
+      "totalVideoCalls": 84,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1618015358954-115ef1ed6515?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1618015358954-115ef1ed6515?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Lucknow",
+        "Behind the scenes of Singing stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100044",
+      "roomName": "Request any song!",
+      "roomCategory": "Singing",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Singing from Lucknow, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 14,
+      "totalViewers": 312,
+      "totalFollowers": 45103,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Singing",
+        "India",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100045",
+      "username": "meera_deshmukh_livo",
+      "displayName": "Meera Deshmukh",
+      "gender": "female",
+      "age": 22,
+      "country": "India",
+      "city": "Ahmedabad",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Ahmedabad. Catch me live streaming Gaming daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Comedian",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-02-16",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 42,
+      "followers": 41982,
+      "following": 381,
+      "friends": 108,
+      "coinsBalance": 12233,
+      "diamondsBalance": 54494,
+      "totalGiftsReceived": 60477,
+      "totalGiftsSent": 834,
+      "totalLiveHours": 615,
+      "totalVideoCalls": 138,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1605980776566-0486c3ac7617?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Ahmedabad",
+        "Behind the scenes of Gaming stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100045",
+      "roomName": "Ranked Matches & Chill 🕹️",
+      "roomCategory": "Gaming",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Gaming from Ahmedabad, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 28,
+      "totalViewers": 0,
+      "totalFollowers": 32293,
+      "topGiftReceived": "Rocket Launch",
+      "popularTags": [
+        "Gaming",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100046",
+      "username": "kiara_advani_livo",
+      "displayName": "Kiara Advani",
+      "gender": "female",
+      "age": 19,
+      "country": "India",
+      "city": "Mumbai",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Mumbai. Catch me live streaming Ludo daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Voice Artist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-02-27",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 13,
+      "followers": 94888,
+      "following": 243,
+      "friends": 114,
+      "coinsBalance": 10498,
+      "diamondsBalance": 45022,
+      "totalGiftsReceived": 51855,
+      "totalGiftsSent": 2469,
+      "totalLiveHours": 541,
+      "totalVideoCalls": 193,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Mumbai",
+        "Behind the scenes of Ludo stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100046",
+      "roomName": "4-player Ludo Seats Open!",
+      "roomCategory": "Ludo",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Ludo from Mumbai, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 8,
+      "totalViewers": 230,
+      "totalFollowers": 72990,
+      "topGiftReceived": "Diamond Ring",
+      "popularTags": [
+        "Ludo",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100047",
+      "username": "shreya_ghoshal_livo",
+      "displayName": "Shreya Ghoshal",
+      "gender": "female",
+      "age": 23,
+      "country": "India",
+      "city": "Delhi",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Delhi. Catch me live streaming PUBG daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Radio Jockey",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-09-27",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 26,
+      "followers": 32427,
+      "following": 121,
+      "friends": 158,
+      "coinsBalance": 1695,
+      "diamondsBalance": 89276,
+      "totalGiftsReceived": 58317,
+      "totalGiftsSent": 12069,
+      "totalLiveHours": 546,
+      "totalVideoCalls": 177,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1620932934088-fbdb2920e484?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1601412436009-d964bd02edbc?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Delhi",
+        "Behind the scenes of PUBG stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100047",
+      "roomName": "Fierce PUBG Fights 🔥",
+      "roomCategory": "PUBG",
+      "roomDescription": "Welcome to my Livo Live space! Streaming PUBG from Delhi, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 17,
+      "totalViewers": 232,
+      "totalFollowers": 24943,
+      "topGiftReceived": "Rose Shower",
+      "popularTags": [
+        "PUBG",
+        "India",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100048",
+      "username": "pooja_hegde_livo",
+      "displayName": "Pooja Hegde",
+      "gender": "female",
+      "age": 19,
+      "country": "India",
+      "city": "Kolkata",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Kolkata. Catch me live streaming Free Fire daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Freelance Writer",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-06-28",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 23,
+      "followers": 83911,
+      "following": 371,
+      "friends": 160,
+      "coinsBalance": 12044,
+      "diamondsBalance": 53238,
+      "totalGiftsReceived": 69409,
+      "totalGiftsSent": 2872,
+      "totalLiveHours": 282,
+      "totalVideoCalls": 158,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1625897428517-7e2062829a26?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Kolkata",
+        "Behind the scenes of Free Fire stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100048",
+      "roomName": "Free Fire Ranked Rush ⚔️",
+      "roomCategory": "Free Fire",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Free Fire from Kolkata, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 15,
+      "totalViewers": 162,
+      "totalFollowers": 64546,
+      "topGiftReceived": "Heart Pulse",
+      "popularTags": [
+        "Free Fire",
+        "India",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100049",
+      "username": "sakshi_malik_livo",
+      "displayName": "Sakshi Malik",
+      "gender": "female",
+      "age": 26,
+      "country": "India",
+      "city": "Bangalore",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Bangalore. Catch me live streaming Lifestyle daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Music Student",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2024-03-17",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 12,
+      "followers": 67019,
+      "following": 373,
+      "friends": 197,
+      "coinsBalance": 1378,
+      "diamondsBalance": 75085,
+      "totalGiftsReceived": 71183,
+      "totalGiftsSent": 1989,
+      "totalLiveHours": 428,
+      "totalVideoCalls": 252,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1562088287-bde35a1ea917?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Bangalore",
+        "Behind the scenes of Lifestyle stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100049",
+      "roomName": "Life Advice & Cozy Chat",
+      "roomCategory": "Lifestyle",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Lifestyle from Bangalore, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 8,
+      "totalViewers": 0,
+      "totalFollowers": 51553,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "Lifestyle",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100050",
+      "username": "nikita_rao_livo",
+      "displayName": "Nikita Rao",
+      "gender": "female",
+      "age": 21,
+      "country": "India",
+      "city": "Chennai",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Chennai. Catch me live streaming Travel daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Guitarist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2024-10-25",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 35,
+      "followers": 68186,
+      "following": 121,
+      "friends": 73,
+      "coinsBalance": 12782,
+      "diamondsBalance": 51680,
+      "totalGiftsReceived": 47082,
+      "totalGiftsSent": 1715,
+      "totalLiveHours": 575,
+      "totalVideoCalls": 300,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1604004555489-723a93d6ce74?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Chennai",
+        "Behind the scenes of Travel stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100050",
+      "roomName": "Vlogging the Local Market ✈️",
+      "roomCategory": "Travel",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Travel from Chennai, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 23,
+      "totalViewers": 156,
+      "totalFollowers": 52450,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Travel",
+        "India",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100051",
+      "username": "garima_chaurasia_livo",
+      "displayName": "Garima Chaurasia",
+      "gender": "female",
+      "age": 20,
+      "country": "India",
+      "city": "Hyderabad",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Hyderabad. Catch me live streaming Cooking daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Fashion Model",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-07-04",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 37,
+      "followers": 54821,
+      "following": 138,
+      "friends": 120,
+      "coinsBalance": 12130,
+      "diamondsBalance": 54328,
+      "totalGiftsReceived": 90778,
+      "totalGiftsSent": 832,
+      "totalLiveHours": 435,
+      "totalVideoCalls": 223,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Hyderabad",
+        "Behind the scenes of Cooking stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100051",
+      "roomName": "Traditional Curry Live!",
+      "roomCategory": "Cooking",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Cooking from Hyderabad, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 24,
+      "totalViewers": 731,
+      "totalFollowers": 42170,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "Cooking",
+        "India",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100052",
+      "username": "avneet_kaur_livo",
+      "displayName": "Avneet Kaur",
+      "gender": "female",
+      "age": 24,
+      "country": "India",
+      "city": "Pune",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Pune. Catch me live streaming Education daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "University Student",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-04-20",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 38,
+      "followers": 87944,
+      "following": 159,
+      "friends": 233,
+      "coinsBalance": 1787,
+      "diamondsBalance": 16992,
+      "totalGiftsReceived": 24069,
+      "totalGiftsSent": 2981,
+      "totalLiveHours": 437,
+      "totalVideoCalls": 338,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1596215143922-eedeaba0d91c?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1617922001439-4a2e6501b337?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Pune",
+        "Behind the scenes of Education stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100052",
+      "roomName": "Learn English in 15 mins 📚",
+      "roomCategory": "Education",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Education from Pune, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 25,
+      "totalViewers": 0,
+      "totalFollowers": 67649,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Education",
+        "India",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100053",
+      "username": "jannat_zubair_livo",
+      "displayName": "Jannat Zubair",
+      "gender": "female",
+      "age": 25,
+      "country": "India",
+      "city": "Jaipur",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Jaipur. Catch me live streaming Fitness daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Dance Instructor",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-07-03",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 40,
+      "followers": 16044,
+      "following": 216,
+      "friends": 276,
+      "coinsBalance": 5583,
+      "diamondsBalance": 68697,
+      "totalGiftsReceived": 55472,
+      "totalGiftsSent": 12252,
+      "totalLiveHours": 205,
+      "totalVideoCalls": 93,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1619380061814-58f03707f082?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Jaipur",
+        "Behind the scenes of Fitness stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100053",
+      "roomName": "Yoga & Meditation 🧘‍♀️",
+      "roomCategory": "Fitness",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Fitness from Jaipur, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 26,
+      "totalViewers": 871,
+      "totalFollowers": 12341,
+      "topGiftReceived": "Rocket Launch",
+      "popularTags": [
+        "Fitness",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100054",
+      "username": "anushka_sen_livo",
+      "displayName": "Anushka Sen",
+      "gender": "female",
+      "age": 20,
+      "country": "India",
+      "city": "Lucknow",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Lucknow. Catch me live streaming Comedy daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Professional Gamer",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-07-19",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 22,
+      "followers": 47794,
+      "following": 326,
+      "friends": 54,
+      "coinsBalance": 1103,
+      "diamondsBalance": 49165,
+      "totalGiftsReceived": 21877,
+      "totalGiftsSent": 9510,
+      "totalLiveHours": 316,
+      "totalVideoCalls": 286,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1601412436009-d964bd02edbc?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Lucknow",
+        "Behind the scenes of Comedy stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100054",
+      "roomName": "Roast and Standup Live",
+      "roomCategory": "Comedy",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Comedy from Lucknow, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 14,
+      "totalViewers": 0,
+      "totalFollowers": 36764,
+      "topGiftReceived": "Diamond Ring",
+      "popularTags": [
+        "Comedy",
+        "India",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100055",
+      "username": "rashmika_mandanna_livo",
+      "displayName": "Rashmika Mandanna",
+      "gender": "female",
+      "age": 22,
+      "country": "India",
+      "city": "Ahmedabad",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Ahmedabad. Catch me live streaming Entertainment daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Digital Artist",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2025-08-12",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 42,
+      "followers": 59145,
+      "following": 174,
+      "friends": 72,
+      "coinsBalance": 14058,
+      "diamondsBalance": 44713,
+      "totalGiftsReceived": 15245,
+      "totalGiftsSent": 15055,
+      "totalLiveHours": 545,
+      "totalVideoCalls": 118,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1588001291548-9111cb23d5df?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Ahmedabad",
+        "Behind the scenes of Entertainment stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100055",
+      "roomName": "Weekly Star Party!",
+      "roomCategory": "Entertainment",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Entertainment from Ahmedabad, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 28,
+      "totalViewers": 0,
+      "totalFollowers": 45496,
+      "topGiftReceived": "Rose Shower",
+      "popularTags": [
+        "Entertainment",
+        "India",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100056",
+      "username": "shraddha_kapoor_livo",
+      "displayName": "Shraddha Kapoor",
+      "gender": "female",
+      "age": 24,
+      "country": "India",
+      "city": "Mumbai",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Mumbai. Catch me live streaming Talk Show daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Social Media Manager",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-02-06",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 18,
+      "followers": 28712,
+      "following": 129,
+      "friends": 96,
+      "coinsBalance": 4098,
+      "diamondsBalance": 14993,
+      "totalGiftsReceived": 98347,
+      "totalGiftsSent": 6476,
+      "totalLiveHours": 407,
+      "totalVideoCalls": 165,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1619380061814-58f03707f082?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Mumbai",
+        "Behind the scenes of Talk Show stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100056",
+      "roomName": "Late Night Deep Talks 💬",
+      "roomCategory": "Talk Show",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Talk Show from Mumbai, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 12,
+      "totalViewers": 0,
+      "totalFollowers": 22086,
+      "topGiftReceived": "Heart Pulse",
+      "popularTags": [
+        "Talk Show",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100057",
+      "username": "alia_bhatt_livo",
+      "displayName": "Alia Bhatt",
+      "gender": "female",
+      "age": 22,
+      "country": "India",
+      "city": "Delhi",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Delhi. Catch me live streaming Music daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Travel Vlogger",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2024-06-05",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 11,
+      "followers": 86723,
+      "following": 185,
+      "friends": 99,
+      "coinsBalance": 2657,
+      "diamondsBalance": 80949,
+      "totalGiftsReceived": 10317,
+      "totalGiftsSent": 3897,
+      "totalLiveHours": 248,
+      "totalVideoCalls": 187,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1589156223104-716d64d8a141?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Delhi",
+        "Behind the scenes of Music stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100057",
+      "roomName": "Late Night Jam Session 🎵",
+      "roomCategory": "Music",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Music from Delhi, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 7,
+      "totalViewers": 137,
+      "totalFollowers": 66710,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "Music",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100058",
+      "username": "kriti_sanon_livo",
+      "displayName": "Kriti Sanon",
+      "gender": "female",
+      "age": 20,
+      "country": "India",
+      "city": "Kolkata",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Kolkata. Catch me live streaming Singing daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Yoga Instructor",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-05-17",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 24,
+      "followers": 50525,
+      "following": 386,
+      "friends": 239,
+      "coinsBalance": 7805,
+      "diamondsBalance": 22535,
+      "totalGiftsReceived": 58000,
+      "totalGiftsSent": 8552,
+      "totalLiveHours": 349,
+      "totalVideoCalls": 67,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1578390432942-d5594bc01ec6?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Kolkata",
+        "Behind the scenes of Singing stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100058",
+      "roomName": "Open Mic Jam 🎤",
+      "roomCategory": "Singing",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Singing from Kolkata, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 16,
+      "totalViewers": 319,
+      "totalFollowers": 38865,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Singing",
+        "India",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100059",
+      "username": "disha_patani_livo",
+      "displayName": "Disha Patani",
+      "gender": "female",
+      "age": 25,
+      "country": "India",
+      "city": "Bangalore",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Bangalore. Catch me live streaming Gaming daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Culinary Chef",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2025-09-03",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 12,
+      "followers": 53497,
+      "following": 348,
+      "friends": 277,
+      "coinsBalance": 3161,
+      "diamondsBalance": 49958,
+      "totalGiftsReceived": 101827,
+      "totalGiftsSent": 6436,
+      "totalLiveHours": 561,
+      "totalVideoCalls": 68,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1605369572399-05d8d64a0f6e?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Bangalore",
+        "Behind the scenes of Gaming stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100059",
+      "roomName": "Let's Play Together! 🌟",
+      "roomCategory": "Gaming",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Gaming from Bangalore, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 8,
+      "totalViewers": 343,
+      "totalFollowers": 41151,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "Gaming",
+        "India",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100060",
+      "username": "janhvi_kapoor_livo",
+      "displayName": "Janhvi Kapoor",
+      "gender": "female",
+      "age": 20,
+      "country": "India",
+      "city": "Chennai",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Chennai. Catch me live streaming Ludo daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Language Teacher",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-09-09",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 22,
+      "followers": 62795,
+      "following": 371,
+      "friends": 179,
+      "coinsBalance": 10738,
+      "diamondsBalance": 12349,
+      "totalGiftsReceived": 99708,
+      "totalGiftsSent": 12408,
+      "totalLiveHours": 222,
+      "totalVideoCalls": 306,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1598550476439-6847785fce6e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1612994370726-5d4d609fca1b?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Chennai",
+        "Behind the scenes of Ludo stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100060",
+      "roomName": "Ludo Championship 🎲",
+      "roomCategory": "Ludo",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Ludo from Chennai, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 14,
+      "totalViewers": 0,
+      "totalFollowers": 48303,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Ludo",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100061",
+      "username": "tara_sutaria_livo",
+      "displayName": "Tara Sutaria",
+      "gender": "female",
+      "age": 23,
+      "country": "India",
+      "city": "Hyderabad",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Hyderabad. Catch me live streaming PUBG daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Comedian",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2024-05-14",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 30,
+      "followers": 29255,
+      "following": 130,
+      "friends": 117,
+      "coinsBalance": 10863,
+      "diamondsBalance": 9567,
+      "totalGiftsReceived": 12160,
+      "totalGiftsSent": 1388,
+      "totalLiveHours": 164,
+      "totalVideoCalls": 49,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1625897428517-7e2062829a26?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1635488641537-b09c791fc37c?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Hyderabad",
+        "Behind the scenes of PUBG stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100061",
+      "roomName": "Road to Conqueror 🏆",
+      "roomCategory": "PUBG",
+      "roomDescription": "Welcome to my Livo Live space! Streaming PUBG from Hyderabad, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 20,
+      "totalViewers": 835,
+      "totalFollowers": 22503,
+      "topGiftReceived": "Rocket Launch",
+      "popularTags": [
+        "PUBG",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100062",
+      "username": "aditi_rao_livo",
+      "displayName": "Aditi Rao",
+      "gender": "female",
+      "age": 22,
+      "country": "India",
+      "city": "Pune",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Pune. Catch me live streaming Free Fire daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Voice Artist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-12-14",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 20,
+      "followers": 64269,
+      "following": 159,
+      "friends": 246,
+      "coinsBalance": 8538,
+      "diamondsBalance": 87740,
+      "totalGiftsReceived": 56535,
+      "totalGiftsSent": 760,
+      "totalLiveHours": 582,
+      "totalVideoCalls": 214,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1562088287-bde35a1ea917?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1611042553975-08733608b2db?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Pune",
+        "Behind the scenes of Free Fire stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100062",
+      "roomName": "FF Customs with Viewers",
+      "roomCategory": "Free Fire",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Free Fire from Pune, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 13,
+      "totalViewers": 753,
+      "totalFollowers": 49437,
+      "topGiftReceived": "Diamond Ring",
+      "popularTags": [
+        "Free Fire",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100063",
+      "username": "payal_rajput_livo",
+      "displayName": "Payal Rajput",
+      "gender": "female",
+      "age": 25,
+      "country": "India",
+      "city": "Jaipur",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Jaipur. Catch me live streaming Lifestyle daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Radio Jockey",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-08-04",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 37,
+      "followers": 65742,
+      "following": 362,
+      "friends": 198,
+      "coinsBalance": 2370,
+      "diamondsBalance": 12780,
+      "totalGiftsReceived": 86006,
+      "totalGiftsSent": 7505,
+      "totalLiveHours": 391,
+      "totalVideoCalls": 275,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Jaipur",
+        "Behind the scenes of Lifestyle stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100063",
+      "roomName": "Let's vibe together!",
+      "roomCategory": "Lifestyle",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Lifestyle from Jaipur, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 24,
+      "totalViewers": 0,
+      "totalFollowers": 50570,
+      "topGiftReceived": "Rose Shower",
+      "popularTags": [
+        "Lifestyle",
+        "India",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100064",
+      "username": "tanvi_shah_livo",
+      "displayName": "Tanvi Shah",
+      "gender": "female",
+      "age": 25,
+      "country": "India",
+      "city": "Lucknow",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Lucknow. Catch me live streaming Travel daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Freelance Writer",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2024-01-11",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 38,
+      "followers": 85646,
+      "following": 166,
+      "friends": 141,
+      "coinsBalance": 12596,
+      "diamondsBalance": 88681,
+      "totalGiftsReceived": 23331,
+      "totalGiftsSent": 12174,
+      "totalLiveHours": 234,
+      "totalVideoCalls": 125,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1630156984285-d60927a7c933?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Lucknow",
+        "Behind the scenes of Travel stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100064",
+      "roomName": "Exploring Hidden Streets 🏔️",
+      "roomCategory": "Travel",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Travel from Lucknow, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 25,
+      "totalViewers": 0,
+      "totalFollowers": 65881,
+      "topGiftReceived": "Heart Pulse",
+      "popularTags": [
+        "Travel",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100065",
+      "username": "garima_chaurasia_livo",
+      "displayName": "Garima Chaurasia",
+      "gender": "female",
+      "age": 19,
+      "country": "India",
+      "city": "Ahmedabad",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Ahmedabad. Catch me live streaming Cooking daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Music Student",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-04-02",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 40,
+      "followers": 58362,
+      "following": 140,
+      "friends": 50,
+      "coinsBalance": 15024,
+      "diamondsBalance": 59194,
+      "totalGiftsReceived": 84960,
+      "totalGiftsSent": 1708,
+      "totalLiveHours": 531,
+      "totalVideoCalls": 196,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1605011933709-a78b59e3bc88?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Ahmedabad",
+        "Behind the scenes of Cooking stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100065",
+      "roomName": "Late Night Mukbang 🍜",
+      "roomCategory": "Cooking",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Cooking from Ahmedabad, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 26,
+      "totalViewers": 100,
+      "totalFollowers": 44893,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "Cooking",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100066",
+      "username": "priya_sharma_livo",
+      "displayName": "Priya Sharma",
+      "gender": "female",
+      "age": 26,
+      "country": "India",
+      "city": "Mumbai",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Mumbai. Catch me live streaming Education daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Guitarist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2024-09-18",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 33,
+      "followers": 35075,
+      "following": 140,
+      "friends": 226,
+      "coinsBalance": 3527,
+      "diamondsBalance": 10915,
+      "totalGiftsReceived": 64247,
+      "totalGiftsSent": 11004,
+      "totalLiveHours": 527,
+      "totalVideoCalls": 84,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Mumbai",
+        "Behind the scenes of Education stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100066",
+      "roomName": "History & Mystery Talks",
+      "roomCategory": "Education",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Education from Mumbai, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 22,
+      "totalViewers": 575,
+      "totalFollowers": 26980,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Education",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100067",
+      "username": "ananya_iyer_livo",
+      "displayName": "Ananya Iyer",
+      "gender": "female",
+      "age": 22,
+      "country": "India",
+      "city": "Delhi",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Delhi. Catch me live streaming Fitness daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Fashion Model",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-09-04",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 11,
+      "followers": 64779,
+      "following": 340,
+      "friends": 272,
+      "coinsBalance": 3092,
+      "diamondsBalance": 51379,
+      "totalGiftsReceived": 31415,
+      "totalGiftsSent": 8901,
+      "totalLiveHours": 496,
+      "totalVideoCalls": 157,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1588001291548-9111cb23d5df?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Delhi",
+        "Behind the scenes of Fitness stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100067",
+      "roomName": "Staying fit & positive!",
+      "roomCategory": "Fitness",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Fitness from Delhi, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 7,
+      "totalViewers": 0,
+      "totalFollowers": 49830,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "Fitness",
+        "India",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100068",
+      "username": "sneha_patel_livo",
+      "displayName": "Sneha Patel",
+      "gender": "female",
+      "age": 24,
+      "country": "India",
+      "city": "Kolkata",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Kolkata. Catch me live streaming Comedy daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "University Student",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-01-03",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 13,
+      "followers": 15680,
+      "following": 259,
+      "friends": 147,
+      "coinsBalance": 12750,
+      "diamondsBalance": 59665,
+      "totalGiftsReceived": 18253,
+      "totalGiftsSent": 14366,
+      "totalLiveHours": 453,
+      "totalVideoCalls": 49,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Kolkata",
+        "Behind the scenes of Comedy stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100068",
+      "roomName": "Mimicry & Pranks 😂",
+      "roomCategory": "Comedy",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Comedy from Kolkata, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 8,
+      "totalViewers": 0,
+      "totalFollowers": 12061,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Comedy",
+        "India",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100069",
+      "username": "aisha_khan_livo",
+      "displayName": "Aisha Khan",
+      "gender": "female",
+      "age": 26,
+      "country": "India",
+      "city": "Bangalore",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Bangalore. Catch me live streaming Entertainment daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Dance Instructor",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2024-04-03",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 15,
+      "followers": 82977,
+      "following": 232,
+      "friends": 249,
+      "coinsBalance": 4965,
+      "diamondsBalance": 74956,
+      "totalGiftsReceived": 101738,
+      "totalGiftsSent": 5874,
+      "totalLiveHours": 278,
+      "totalVideoCalls": 139,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1589156223104-716d64d8a141?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Bangalore",
+        "Behind the scenes of Entertainment stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100069",
+      "roomName": "PK Battles Back-to-Back 🥊",
+      "roomCategory": "Entertainment",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Entertainment from Bangalore, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 10,
+      "totalViewers": 0,
+      "totalFollowers": 63828,
+      "topGiftReceived": "Rocket Launch",
+      "popularTags": [
+        "Entertainment",
+        "India",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100070",
+      "username": "diya_sen_livo",
+      "displayName": "Diya Sen",
+      "gender": "female",
+      "age": 21,
+      "country": "India",
+      "city": "Chennai",
+      "language": "Hindi & English & Punjabi & Marathi & Bengali",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Chennai. Catch me live streaming Talk Show daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Professional Gamer",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-02-05",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 35,
+      "followers": 78743,
+      "following": 284,
+      "friends": 240,
+      "coinsBalance": 14683,
+      "diamondsBalance": 6304,
+      "totalGiftsReceived": 61849,
+      "totalGiftsSent": 2812,
+      "totalLiveHours": 458,
+      "totalVideoCalls": 268,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1578390432942-d5594bc01ec6?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Chennai",
+        "Behind the scenes of Talk Show stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100070",
+      "roomName": "Dating Q&A & Gossip",
+      "roomCategory": "Talk Show",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Talk Show from Chennai, India. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 23,
+      "totalViewers": 361,
+      "totalFollowers": 60571,
+      "topGiftReceived": "Diamond Ring",
+      "popularTags": [
+        "Talk Show",
+        "India",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100071",
+      "username": "aaradhya_shrestha_livo",
+      "displayName": "Aaradhya Shrestha",
+      "gender": "female",
+      "age": 20,
+      "country": "Nepal",
+      "city": "Kathmandu",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Kathmandu. Catch me live streaming Music daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Digital Artist",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2025-08-26",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 15,
+      "followers": 34437,
+      "following": 191,
+      "friends": 286,
+      "coinsBalance": 5150,
+      "diamondsBalance": 80213,
+      "totalGiftsReceived": 36557,
+      "totalGiftsSent": 13896,
+      "totalLiveHours": 381,
+      "totalVideoCalls": 321,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1605369572399-05d8d64a0f6e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1620932934088-fbdb2920e484?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Kathmandu",
+        "Behind the scenes of Music stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100071",
+      "roomName": "Guitar Acoustics 🎸",
+      "roomCategory": "Music",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Music from Kathmandu, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 10,
+      "totalViewers": 244,
+      "totalFollowers": 26490,
+      "topGiftReceived": "Rose Shower",
+      "popularTags": [
+        "Music",
+        "Nepal",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100072",
+      "username": "kriti_tamang_livo",
+      "displayName": "Kriti Tamang",
+      "gender": "female",
+      "age": 22,
+      "country": "Nepal",
+      "city": "Pokhara",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Pokhara. Catch me live streaming Singing daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Social Media Manager",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-08-10",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 34,
+      "followers": 92194,
+      "following": 140,
+      "friends": 257,
+      "coinsBalance": 13202,
+      "diamondsBalance": 35347,
+      "totalGiftsReceived": 81221,
+      "totalGiftsSent": 9425,
+      "totalLiveHours": 487,
+      "totalVideoCalls": 218,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1612994370726-5d4d609fca1b?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Pokhara",
+        "Behind the scenes of Singing stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100072",
+      "roomName": "Sufi & Ghazal Nights 🎤",
+      "roomCategory": "Singing",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Singing from Pokhara, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 22,
+      "totalViewers": 0,
+      "totalFollowers": 70918,
+      "topGiftReceived": "Heart Pulse",
+      "popularTags": [
+        "Singing",
+        "Nepal",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100073",
+      "username": "shreya_ghimire_livo",
+      "displayName": "Shreya Ghimire",
+      "gender": "female",
+      "age": 23,
+      "country": "Nepal",
+      "city": "Lalitpur",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Lalitpur. Catch me live streaming Gaming daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Travel Vlogger",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-02-09",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 28,
+      "followers": 29736,
+      "following": 373,
+      "friends": 152,
+      "coinsBalance": 10741,
+      "diamondsBalance": 64093,
+      "totalGiftsReceived": 95059,
+      "totalGiftsSent": 3459,
+      "totalLiveHours": 454,
+      "totalVideoCalls": 147,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1635488641537-b09c791fc37c?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Lalitpur",
+        "Behind the scenes of Gaming stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100073",
+      "roomName": "Cozy Gaming Lounge 👾",
+      "roomCategory": "Gaming",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Gaming from Lalitpur, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 18,
+      "totalViewers": 282,
+      "totalFollowers": 22873,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "Gaming",
+        "Nepal",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100074",
+      "username": "alisha_rai_livo",
+      "displayName": "Alisha Rai",
+      "gender": "female",
+      "age": 20,
+      "country": "Nepal",
+      "city": "Biratnagar",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Biratnagar. Catch me live streaming Ludo daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Yoga Instructor",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-09-26",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 42,
+      "followers": 39605,
+      "following": 216,
+      "friends": 244,
+      "coinsBalance": 12501,
+      "diamondsBalance": 38343,
+      "totalGiftsReceived": 44440,
+      "totalGiftsSent": 8864,
+      "totalLiveHours": 618,
+      "totalVideoCalls": 127,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1611042553975-08733608b2db?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Biratnagar",
+        "Behind the scenes of Ludo stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100074",
+      "roomName": "🎲 Ludo Madness",
+      "roomCategory": "Ludo",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Ludo from Biratnagar, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 28,
+      "totalViewers": 334,
+      "totalFollowers": 30465,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Ludo",
+        "Nepal",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100075",
+      "username": "namrata_shrestha_livo",
+      "displayName": "Namrata Shrestha",
+      "gender": "female",
+      "age": 25,
+      "country": "Nepal",
+      "city": "Dharan",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Dharan. Catch me live streaming PUBG daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Culinary Chef",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2025-11-13",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 13,
+      "followers": 63034,
+      "following": 242,
+      "friends": 124,
+      "coinsBalance": 3162,
+      "diamondsBalance": 12389,
+      "totalGiftsReceived": 104165,
+      "totalGiftsSent": 3287,
+      "totalLiveHours": 414,
+      "totalVideoCalls": 309,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1615243468525-a131a37c4e5c?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1615243468525-a131a37c4e5c?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Dharan",
+        "Behind the scenes of PUBG stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100075",
+      "roomName": "PUBG Pro Rush Game 🔫",
+      "roomCategory": "PUBG",
+      "roomDescription": "Welcome to my Livo Live space! Streaming PUBG from Dharan, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 8,
+      "totalViewers": 0,
+      "totalFollowers": 48487,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "PUBG",
+        "Nepal",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100076",
+      "username": "barsha_raut_livo",
+      "displayName": "Barsha Raut",
+      "gender": "female",
+      "age": 22,
+      "country": "Nepal",
+      "city": "Bhaktapur",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Bhaktapur. Catch me live streaming Free Fire daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Language Teacher",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-02-23",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 13,
+      "followers": 77713,
+      "following": 225,
+      "friends": 202,
+      "coinsBalance": 9641,
+      "diamondsBalance": 49540,
+      "totalGiftsReceived": 81157,
+      "totalGiftsSent": 10857,
+      "totalLiveHours": 355,
+      "totalVideoCalls": 123,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Bhaktapur",
+        "Behind the scenes of Free Fire stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100076",
+      "roomName": "Diamond Giveaway Match!",
+      "roomCategory": "Free Fire",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Free Fire from Bhaktapur, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 8,
+      "totalViewers": 236,
+      "totalFollowers": 59779,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Free Fire",
+        "Nepal",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100077",
+      "username": "priyanka_karki_livo",
+      "displayName": "Priyanka Karki",
+      "gender": "female",
+      "age": 23,
+      "country": "Nepal",
+      "city": "Butwal",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Butwal. Catch me live streaming Lifestyle daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Comedian",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-07-17",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 32,
+      "followers": 38893,
+      "following": 178,
+      "friends": 155,
+      "coinsBalance": 10353,
+      "diamondsBalance": 25963,
+      "totalGiftsReceived": 39432,
+      "totalGiftsSent": 15244,
+      "totalLiveHours": 551,
+      "totalVideoCalls": 286,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1630156984285-d60927a7c933?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Butwal",
+        "Behind the scenes of Lifestyle stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100077",
+      "roomName": "Daily Skincare & Chitchat 💄",
+      "roomCategory": "Lifestyle",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Lifestyle from Butwal, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 21,
+      "totalViewers": 813,
+      "totalFollowers": 29917,
+      "topGiftReceived": "Rocket Launch",
+      "popularTags": [
+        "Lifestyle",
+        "Nepal",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100078",
+      "username": "reema_bishwokarma_livo",
+      "displayName": "Reema Bishwokarma",
+      "gender": "female",
+      "age": 24,
+      "country": "Nepal",
+      "city": "Janakpur",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Janakpur. Catch me live streaming Travel daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Voice Artist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-11-23",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 14,
+      "followers": 57271,
+      "following": 263,
+      "friends": 63,
+      "coinsBalance": 9032,
+      "diamondsBalance": 34536,
+      "totalGiftsReceived": 22958,
+      "totalGiftsSent": 2071,
+      "totalLiveHours": 363,
+      "totalVideoCalls": 191,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Janakpur",
+        "Behind the scenes of Travel stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100078",
+      "roomName": "Backpacking Wonders",
+      "roomCategory": "Travel",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Travel from Janakpur, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 9,
+      "totalViewers": 0,
+      "totalFollowers": 44054,
+      "topGiftReceived": "Diamond Ring",
+      "popularTags": [
+        "Travel",
+        "Nepal",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100079",
+      "username": "melina_rai_livo",
+      "displayName": "Melina Rai",
+      "gender": "female",
+      "age": 21,
+      "country": "Nepal",
+      "city": "Kathmandu",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Kathmandu. Catch me live streaming Cooking daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Radio Jockey",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2025-09-06",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 31,
+      "followers": 94337,
+      "following": 363,
+      "friends": 138,
+      "coinsBalance": 4351,
+      "diamondsBalance": 89169,
+      "totalGiftsReceived": 63696,
+      "totalGiftsSent": 13356,
+      "totalLiveHours": 542,
+      "totalVideoCalls": 238,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1604004555489-723a93d6ce74?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Kathmandu",
+        "Behind the scenes of Cooking stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100079",
+      "roomName": "Secret Family Recipes 🍲",
+      "roomCategory": "Cooking",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Cooking from Kathmandu, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 20,
+      "totalViewers": 0,
+      "totalFollowers": 72566,
+      "topGiftReceived": "Rose Shower",
+      "popularTags": [
+        "Cooking",
+        "Nepal",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100080",
+      "username": "swastima_khadka_livo",
+      "displayName": "Swastima Khadka",
+      "gender": "female",
+      "age": 20,
+      "country": "Nepal",
+      "city": "Pokhara",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Pokhara. Catch me live streaming Education daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Freelance Writer",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2024-11-08",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 25,
+      "followers": 19954,
+      "following": 306,
+      "friends": 86,
+      "coinsBalance": 3201,
+      "diamondsBalance": 19425,
+      "totalGiftsReceived": 53750,
+      "totalGiftsSent": 1190,
+      "totalLiveHours": 370,
+      "totalVideoCalls": 180,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1596215143922-eedeaba0d91c?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Pokhara",
+        "Behind the scenes of Education stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100080",
+      "roomName": "Tech & Coding Q&A 💻",
+      "roomCategory": "Education",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Education from Pokhara, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 16,
+      "totalViewers": 0,
+      "totalFollowers": 15349,
+      "topGiftReceived": "Heart Pulse",
+      "popularTags": [
+        "Education",
+        "Nepal",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100081",
+      "username": "keki_adhikari_livo",
+      "displayName": "Keki Adhikari",
+      "gender": "female",
+      "age": 22,
+      "country": "Nepal",
+      "city": "Lalitpur",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Lalitpur. Catch me live streaming Fitness daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Music Student",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-09-23",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 40,
+      "followers": 41847,
+      "following": 314,
+      "friends": 64,
+      "coinsBalance": 4171,
+      "diamondsBalance": 24356,
+      "totalGiftsReceived": 42810,
+      "totalGiftsSent": 7101,
+      "totalLiveHours": 528,
+      "totalVideoCalls": 97,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1618015358954-115ef1ed6515?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Lalitpur",
+        "Behind the scenes of Fitness stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100081",
+      "roomName": "Pilates & Talk 🏃‍♀️",
+      "roomCategory": "Fitness",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Fitness from Lalitpur, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 26,
+      "totalViewers": 0,
+      "totalFollowers": 32190,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "Fitness",
+        "Nepal",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100082",
+      "username": "barsha_siwakoti_livo",
+      "displayName": "Barsha Siwakoti",
+      "gender": "female",
+      "age": 20,
+      "country": "Nepal",
+      "city": "Biratnagar",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Biratnagar. Catch me live streaming Comedy daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Guitarist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2024-03-10",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 41,
+      "followers": 29579,
+      "following": 279,
+      "friends": 105,
+      "coinsBalance": 3860,
+      "diamondsBalance": 53820,
+      "totalGiftsReceived": 75908,
+      "totalGiftsSent": 2037,
+      "totalLiveHours": 307,
+      "totalVideoCalls": 340,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Biratnagar",
+        "Behind the scenes of Comedy stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100082",
+      "roomName": "Guaranteed laughs 😂",
+      "roomCategory": "Comedy",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Comedy from Biratnagar, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 27,
+      "totalViewers": 531,
+      "totalFollowers": 22753,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Comedy",
+        "Nepal",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100083",
+      "username": "anna_sharma_livo",
+      "displayName": "Anna Sharma",
+      "gender": "female",
+      "age": 20,
+      "country": "Nepal",
+      "city": "Dharan",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Dharan. Catch me live streaming Entertainment daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Fashion Model",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2025-07-28",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 15,
+      "followers": 36552,
+      "following": 281,
+      "friends": 113,
+      "coinsBalance": 10961,
+      "diamondsBalance": 47550,
+      "totalGiftsReceived": 20682,
+      "totalGiftsSent": 9291,
+      "totalLiveHours": 179,
+      "totalVideoCalls": 182,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Dharan",
+        "Behind the scenes of Entertainment stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100083",
+      "roomName": "Truth or Dare ⚡",
+      "roomCategory": "Entertainment",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Entertainment from Dharan, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 10,
+      "totalViewers": 0,
+      "totalFollowers": 28116,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "Entertainment",
+        "Nepal",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100084",
+      "username": "jassita_gurung_livo",
+      "displayName": "Jassita Gurung",
+      "gender": "female",
+      "age": 26,
+      "country": "Nepal",
+      "city": "Bhaktapur",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Bhaktapur. Catch me live streaming Talk Show daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "University Student",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2024-05-20",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 24,
+      "followers": 26195,
+      "following": 372,
+      "friends": 225,
+      "coinsBalance": 13189,
+      "diamondsBalance": 43031,
+      "totalGiftsReceived": 47030,
+      "totalGiftsSent": 1578,
+      "totalLiveHours": 496,
+      "totalVideoCalls": 301,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1601412436009-d964bd02edbc?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Bhaktapur",
+        "Behind the scenes of Talk Show stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100084",
+      "roomName": "Heart to Heart Advice ❤️",
+      "roomCategory": "Talk Show",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Talk Show from Bhaktapur, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 16,
+      "totalViewers": 0,
+      "totalFollowers": 20150,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Talk Show",
+        "Nepal",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100085",
+      "username": "malina_joshi_livo",
+      "displayName": "Malina Joshi",
+      "gender": "female",
+      "age": 23,
+      "country": "Nepal",
+      "city": "Butwal",
+      "language": "Nepali & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Butwal. Catch me live streaming Music daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Dance Instructor",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-04-08",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 31,
+      "followers": 70270,
+      "following": 100,
+      "friends": 285,
+      "coinsBalance": 7419,
+      "diamondsBalance": 42083,
+      "totalGiftsReceived": 99782,
+      "totalGiftsSent": 12491,
+      "totalLiveHours": 417,
+      "totalVideoCalls": 148,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1625897428517-7e2062829a26?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Butwal",
+        "Behind the scenes of Music stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100085",
+      "roomName": "Violin Grooves 🎻",
+      "roomCategory": "Music",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Music from Butwal, Nepal. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 20,
+      "totalViewers": 0,
+      "totalFollowers": 54053,
+      "topGiftReceived": "Rocket Launch",
+      "popularTags": [
+        "Music",
+        "Nepal",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100086",
+      "username": "mahira_khan_livo",
+      "displayName": "Mahira Khan",
+      "gender": "female",
+      "age": 26,
+      "country": "Pakistan",
+      "city": "Karachi",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Karachi. Catch me live streaming Singing daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Professional Gamer",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2024-10-02",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 19,
+      "followers": 88532,
+      "following": 255,
+      "friends": 254,
+      "coinsBalance": 7039,
+      "diamondsBalance": 63731,
+      "totalGiftsReceived": 99023,
+      "totalGiftsSent": 9163,
+      "totalLiveHours": 359,
+      "totalVideoCalls": 288,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1618015358954-115ef1ed6515?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1562088287-bde35a1ea917?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Karachi",
+        "Behind the scenes of Singing stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100086",
+      "roomName": "Singing Your Requests 🎙️",
+      "roomCategory": "Singing",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Singing from Karachi, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 12,
+      "totalViewers": 783,
+      "totalFollowers": 68101,
+      "topGiftReceived": "Diamond Ring",
+      "popularTags": [
+        "Singing",
+        "Pakistan",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100087",
+      "username": "hania_amir_livo",
+      "displayName": "Hania Amir",
+      "gender": "female",
+      "age": 22,
+      "country": "Pakistan",
+      "city": "Lahore",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Lahore. Catch me live streaming Gaming daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Digital Artist",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2025-10-05",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 41,
+      "followers": 84478,
+      "following": 372,
+      "friends": 207,
+      "coinsBalance": 10702,
+      "diamondsBalance": 48186,
+      "totalGiftsReceived": 25057,
+      "totalGiftsSent": 13317,
+      "totalLiveHours": 450,
+      "totalVideoCalls": 274,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1605980776566-0486c3ac7617?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Lahore",
+        "Behind the scenes of Gaming stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100087",
+      "roomName": "Ranked Matches & Chill 🕹️",
+      "roomCategory": "Gaming",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Gaming from Lahore, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 27,
+      "totalViewers": 123,
+      "totalFollowers": 64983,
+      "topGiftReceived": "Rose Shower",
+      "popularTags": [
+        "Gaming",
+        "Pakistan",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100088",
+      "username": "sarah_khan_livo",
+      "displayName": "Sarah Khan",
+      "gender": "female",
+      "age": 25,
+      "country": "Pakistan",
+      "city": "Islamabad",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Islamabad. Catch me live streaming Ludo daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Social Media Manager",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2024-10-12",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 37,
+      "followers": 68873,
+      "following": 234,
+      "friends": 97,
+      "coinsBalance": 2691,
+      "diamondsBalance": 50184,
+      "totalGiftsReceived": 88990,
+      "totalGiftsSent": 4692,
+      "totalLiveHours": 329,
+      "totalVideoCalls": 195,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Islamabad",
+        "Behind the scenes of Ludo stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100088",
+      "roomName": "4-player Ludo Seats Open!",
+      "roomCategory": "Ludo",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Ludo from Islamabad, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 24,
+      "totalViewers": 182,
+      "totalFollowers": 52979,
+      "topGiftReceived": "Heart Pulse",
+      "popularTags": [
+        "Ludo",
+        "Pakistan",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100089",
+      "username": "sajal_aly_livo",
+      "displayName": "Sajal Aly",
+      "gender": "female",
+      "age": 19,
+      "country": "Pakistan",
+      "city": "Peshawar",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Peshawar. Catch me live streaming PUBG daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Travel Vlogger",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2024-03-01",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 35,
+      "followers": 62310,
+      "following": 142,
+      "friends": 182,
+      "coinsBalance": 15074,
+      "diamondsBalance": 71893,
+      "totalGiftsReceived": 77232,
+      "totalGiftsSent": 13454,
+      "totalLiveHours": 252,
+      "totalVideoCalls": 171,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1620932934088-fbdb2920e484?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1617922001439-4a2e6501b337?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Peshawar",
+        "Behind the scenes of PUBG stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100089",
+      "roomName": "Fierce PUBG Fights 🔥",
+      "roomCategory": "PUBG",
+      "roomDescription": "Welcome to my Livo Live space! Streaming PUBG from Peshawar, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 23,
+      "totalViewers": 0,
+      "totalFollowers": 47930,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "PUBG",
+        "Pakistan",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100090",
+      "username": "alizeh_shah_livo",
+      "displayName": "Alizeh Shah",
+      "gender": "female",
+      "age": 26,
+      "country": "Pakistan",
+      "city": "Multan",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Multan. Catch me live streaming Free Fire daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Yoga Instructor",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2024-09-17",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 23,
+      "followers": 57665,
+      "following": 340,
+      "friends": 115,
+      "coinsBalance": 15784,
+      "diamondsBalance": 53831,
+      "totalGiftsReceived": 37458,
+      "totalGiftsSent": 10026,
+      "totalLiveHours": 530,
+      "totalVideoCalls": 162,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1619380061814-58f03707f082?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Multan",
+        "Behind the scenes of Free Fire stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100090",
+      "roomName": "Free Fire Ranked Rush ⚔️",
+      "roomCategory": "Free Fire",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Free Fire from Multan, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 15,
+      "totalViewers": 299,
+      "totalFollowers": 44357,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Free Fire",
+        "Pakistan",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100091",
+      "username": "kinza_hashmi_livo",
+      "displayName": "Kinza Hashmi",
+      "gender": "female",
+      "age": 23,
+      "country": "Pakistan",
+      "city": "Faisalabad",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Faisalabad. Catch me live streaming Lifestyle daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Culinary Chef",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2025-09-25",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 35,
+      "followers": 63155,
+      "following": 169,
+      "friends": 87,
+      "coinsBalance": 15677,
+      "diamondsBalance": 19593,
+      "totalGiftsReceived": 25086,
+      "totalGiftsSent": 14825,
+      "totalLiveHours": 221,
+      "totalVideoCalls": 305,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Faisalabad",
+        "Behind the scenes of Lifestyle stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100091",
+      "roomName": "Life Advice & Cozy Chat",
+      "roomCategory": "Lifestyle",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Lifestyle from Faisalabad, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 23,
+      "totalViewers": 0,
+      "totalFollowers": 48580,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "Lifestyle",
+        "Pakistan",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100092",
+      "username": "aiman_khan_livo",
+      "displayName": "Aiman Khan",
+      "gender": "female",
+      "age": 26,
+      "country": "Pakistan",
+      "city": "Sialkot",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Sialkot. Catch me live streaming Travel daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Language Teacher",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-12-01",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 18,
+      "followers": 46545,
+      "following": 206,
+      "friends": 106,
+      "coinsBalance": 15294,
+      "diamondsBalance": 66641,
+      "totalGiftsReceived": 36162,
+      "totalGiftsSent": 8569,
+      "totalLiveHours": 334,
+      "totalVideoCalls": 164,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1604004555489-723a93d6ce74?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1588001291548-9111cb23d5df?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Sialkot",
+        "Behind the scenes of Travel stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100092",
+      "roomName": "Vlogging the Local Market ✈️",
+      "roomCategory": "Travel",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Travel from Sialkot, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 12,
+      "totalViewers": 834,
+      "totalFollowers": 35803,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Travel",
+        "Pakistan",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100093",
+      "username": "minal_khan_livo",
+      "displayName": "Minal Khan",
+      "gender": "female",
+      "age": 22,
+      "country": "Pakistan",
+      "city": "Rawalpindi",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Rawalpindi. Catch me live streaming Cooking daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Comedian",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-08-27",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 17,
+      "followers": 29170,
+      "following": 201,
+      "friends": 212,
+      "coinsBalance": 6566,
+      "diamondsBalance": 81937,
+      "totalGiftsReceived": 32046,
+      "totalGiftsSent": 7470,
+      "totalLiveHours": 490,
+      "totalVideoCalls": 95,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Rawalpindi",
+        "Behind the scenes of Cooking stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100093",
+      "roomName": "Traditional Curry Live!",
+      "roomCategory": "Cooking",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Cooking from Rawalpindi, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 11,
+      "totalViewers": 818,
+      "totalFollowers": 22438,
+      "topGiftReceived": "Rocket Launch",
+      "popularTags": [
+        "Cooking",
+        "Pakistan",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100094",
+      "username": "sana_javed_livo",
+      "displayName": "Sana Javed",
+      "gender": "female",
+      "age": 22,
+      "country": "Pakistan",
+      "city": "Karachi",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Karachi. Catch me live streaming Education daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Voice Artist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2025-09-06",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 12,
+      "followers": 68387,
+      "following": 199,
+      "friends": 102,
+      "coinsBalance": 7625,
+      "diamondsBalance": 80764,
+      "totalGiftsReceived": 70202,
+      "totalGiftsSent": 14955,
+      "totalLiveHours": 318,
+      "totalVideoCalls": 104,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1596215143922-eedeaba0d91c?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1589156223104-716d64d8a141?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Karachi",
+        "Behind the scenes of Education stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100094",
+      "roomName": "Learn English in 15 mins 📚",
+      "roomCategory": "Education",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Education from Karachi, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 8,
+      "totalViewers": 0,
+      "totalFollowers": 52605,
+      "topGiftReceived": "Diamond Ring",
+      "popularTags": [
+        "Education",
+        "Pakistan",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100095",
+      "username": "zoya_nasir_livo",
+      "displayName": "Zoya Nasir",
+      "gender": "female",
+      "age": 25,
+      "country": "Pakistan",
+      "city": "Lahore",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Lahore. Catch me live streaming Fitness daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Radio Jockey",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-12-02",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 13,
+      "followers": 43228,
+      "following": 285,
+      "friends": 180,
+      "coinsBalance": 2496,
+      "diamondsBalance": 53431,
+      "totalGiftsReceived": 75919,
+      "totalGiftsSent": 6708,
+      "totalLiveHours": 363,
+      "totalVideoCalls": 111,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1578390432942-d5594bc01ec6?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Lahore",
+        "Behind the scenes of Fitness stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100095",
+      "roomName": "Yoga & Meditation 🧘‍♀️",
+      "roomCategory": "Fitness",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Fitness from Lahore, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 8,
+      "totalViewers": 499,
+      "totalFollowers": 33252,
+      "topGiftReceived": "Rose Shower",
+      "popularTags": [
+        "Fitness",
+        "Pakistan",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100096",
+      "username": "iqra_aziz_livo",
+      "displayName": "Iqra Aziz",
+      "gender": "female",
+      "age": 19,
+      "country": "Pakistan",
+      "city": "Islamabad",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Islamabad. Catch me live streaming Comedy daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Freelance Writer",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2025-09-26",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 14,
+      "followers": 28539,
+      "following": 352,
+      "friends": 159,
+      "coinsBalance": 11009,
+      "diamondsBalance": 77252,
+      "totalGiftsReceived": 70480,
+      "totalGiftsSent": 9402,
+      "totalLiveHours": 148,
+      "totalVideoCalls": 90,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1601412436009-d964bd02edbc?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1605369572399-05d8d64a0f6e?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Islamabad",
+        "Behind the scenes of Comedy stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100096",
+      "roomName": "Roast and Standup Live",
+      "roomCategory": "Comedy",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Comedy from Islamabad, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 9,
+      "totalViewers": 376,
+      "totalFollowers": 21953,
+      "topGiftReceived": "Heart Pulse",
+      "popularTags": [
+        "Comedy",
+        "Pakistan",
+        "Friendly",
+        "Cozy"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100097",
+      "username": "ayesha_omar_livo",
+      "displayName": "Ayesha Omar",
+      "gender": "female",
+      "age": 23,
+      "country": "Pakistan",
+      "city": "Peshawar",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Peshawar. Catch me live streaming Entertainment daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Music Student",
+      "relationshipStatus": "Single 💖",
+      "joinDate": "2025-05-08",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 15,
+      "followers": 69715,
+      "following": 250,
+      "friends": 139,
+      "coinsBalance": 9603,
+      "diamondsBalance": 74994,
+      "totalGiftsReceived": 80875,
+      "totalGiftsSent": 12042,
+      "totalLiveHours": 444,
+      "totalVideoCalls": 335,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1612994370726-5d4d609fca1b?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Peshawar",
+        "Behind the scenes of Entertainment stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100097",
+      "roomName": "Weekly Star Party!",
+      "roomCategory": "Entertainment",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Entertainment from Peshawar, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 10,
+      "totalViewers": 181,
+      "totalFollowers": 53626,
+      "topGiftReceived": "Royal Crown",
+      "popularTags": [
+        "Entertainment",
+        "Pakistan",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100098",
+      "username": "kubra_khan_livo",
+      "displayName": "Kubra Khan",
+      "gender": "female",
+      "age": 26,
+      "country": "Pakistan",
+      "city": "Multan",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Multan. Catch me live streaming Talk Show daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Guitarist",
+      "relationshipStatus": "In a Relationship",
+      "joinDate": "2024-01-09",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "Standard",
+      "level": 44,
+      "followers": 92731,
+      "following": 117,
+      "friends": 274,
+      "coinsBalance": 9869,
+      "diamondsBalance": 45319,
+      "totalGiftsReceived": 78034,
+      "totalGiftsSent": 8670,
+      "totalLiveHours": 136,
+      "totalVideoCalls": 75,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1619380061814-58f03707f082?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1635488641537-b09c791fc37c?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Multan",
+        "Behind the scenes of Talk Show stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100098",
+      "roomName": "Late Night Deep Talks 💬",
+      "roomCategory": "Talk Show",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Talk Show from Multan, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 29,
+      "totalViewers": 0,
+      "totalFollowers": 71331,
+      "topGiftReceived": "Ferrari",
+      "popularTags": [
+        "Talk Show",
+        "Pakistan",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100099",
+      "username": "yumna_zaidi_livo",
+      "displayName": "Yumna Zaidi",
+      "gender": "female",
+      "age": 26,
+      "country": "Pakistan",
+      "city": "Faisalabad",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Faisalabad. Catch me live streaming Music daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "Fashion Model",
+      "relationshipStatus": "Complicated",
+      "joinDate": "2024-11-22",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 42,
+      "followers": 47569,
+      "following": 212,
+      "friends": 262,
+      "coinsBalance": 12397,
+      "diamondsBalance": 67854,
+      "totalGiftsReceived": 36429,
+      "totalGiftsSent": 11557,
+      "totalLiveHours": 169,
+      "totalVideoCalls": 106,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1611042553975-08733608b2db?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Faisalabad",
+        "Behind the scenes of Music stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100099",
+      "roomName": "Melody & Chill 🎹",
+      "roomCategory": "Music",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Music from Faisalabad, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Offline",
+      "roomLevel": 28,
+      "totalViewers": 0,
+      "totalFollowers": 36591,
+      "topGiftReceived": "Yacht Cruise",
+      "popularTags": [
+        "Music",
+        "Pakistan",
+        "Friendly",
+        "Cozy",
+        "PK Battle"
+      ]
+    }
+  },
+  {
+    "profile": {
+      "userId": "LV100100",
+      "username": "mawra_hocane_livo",
+      "displayName": "Mawra Hocane",
+      "gender": "female",
+      "age": 26,
+      "country": "Pakistan",
+      "city": "Sialkot",
+      "language": "Urdu & Punjabi & English",
+      "shortBio": "✨ Approved Live Star & Creator! Loving life in Sialkot. Catch me live streaming Singing daily at 8 PM. Drop by and send some love! 💖",
+      "occupation": "University Student",
+      "relationshipStatus": "Single & Searching ✨",
+      "joinDate": "2024-09-01",
+      "verificationStatus": "Verified Creator ⚡",
+      "vipStatus": "VIP Member ⭐",
+      "level": 35,
+      "followers": 27343,
+      "following": 120,
+      "friends": 226,
+      "coinsBalance": 4458,
+      "diamondsBalance": 79931,
+      "totalGiftsReceived": 15768,
+      "totalGiftsSent": 10305,
+      "totalLiveHours": 503,
+      "totalVideoCalls": 221,
+      "profilePhotoUrl": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&q=80&w=250&h=250",
+      "coverPhotoUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600&h=450"
+    },
+    "media": {
+      "photoTitles": [
+        "Beautiful afternoon vlog snap at Sialkot",
+        "Behind the scenes of Singing stream setup",
+        "Chilling with friends on a cozy weekend",
+        "Thank you so much Livo Live family for the top gifts! 👑",
+        "Throwback memory trip picture 📸"
+      ],
+      "videoTitles": [
+        "Acoustic warmup vlog clip",
+        "Crazy funny moments from my PK battle today"
+      ]
+    },
+    "liveRoom": {
+      "roomId": "room_lv100100",
+      "roomName": "Karaoke Chitchat 🌟",
+      "roomCategory": "Singing",
+      "roomDescription": "Welcome to my Livo Live space! Streaming Singing from Sialkot, Pakistan. Pull up a chair and let's have a great time!",
+      "currentStatus": "Live",
+      "roomLevel": 23,
+      "totalViewers": 774,
+      "totalFollowers": 21033,
+      "topGiftReceived": "Lion Roar",
+      "popularTags": [
+        "Singing",
+        "Pakistan",
+        "Friendly"
+      ]
+    }
+  }
+];

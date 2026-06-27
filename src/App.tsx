@@ -6,13 +6,14 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Tv, Wallet, Film, Compass, MessageCircle, BarChart3, Shield, Star, Users, Bell, 
-  Settings, User, Phone, Video, Heart, X, Sparkles, LogOut, CheckCircle
+  Settings, User, Phone, Video, Heart, X, Sparkles, LogOut, CheckCircle, Flame
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { UserProfile, LiveRoom, Post, Gift, Transaction, WithdrawalRequest, CreatorStats } from './types';
 
 // Child view components
 import LiveRoomView from './components/LiveRoomView';
+import CreateLiveRoomModal from './components/CreateLiveRoomModal';
 import CallingView from './components/CallingView';
 import WalletView from './components/WalletView';
 import FeedView from './components/FeedView';
@@ -20,6 +21,8 @@ import ExploreView from './components/ExploreView';
 import MessagesView from './components/MessagesView';
 import CreatorDashboard from './components/CreatorDashboard';
 import AdminPanel from './components/AdminPanel';
+import ProfileView from './components/ProfileView';
+import UserProfileView from './components/UserProfileView';
 
 export default function App() {
   // Global Database state synced from server
@@ -30,11 +33,22 @@ export default function App() {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [withdrawals, setWithdrawals] = useState<WithdrawalRequest[]>([]);
   const [stats, setStats] = useState<CreatorStats[]>([]);
+  const [adminCallStats, setAdminCallStats] = useState<any>({
+    todayRevenue: 0,
+    weeklyRevenue: 0,
+    monthlyRevenue: 0,
+    totalRevenue: 0,
+    totalVoiceCalls: 0,
+    totalVideoCalls: 0,
+    totalCharged: 0
+  });
 
   // Local active app views state
-  const [activeTab, setActiveTab] = useState<'live' | 'wallet' | 'feed' | 'explore' | 'messages' | 'creator' | 'admin'>('live');
+  const [activeTab, setActiveTab] = useState<'live' | 'wallet' | 'feed' | 'explore' | 'messages' | 'creator' | 'admin' | 'profile'>('live');
   const [selectedCreatorProfile, setSelectedCreatorProfile] = useState<UserProfile | null>(null);
+  const [activeUserProfile, setActiveUserProfile] = useState<UserProfile | null>(null);
   const [activeLiveRoom, setActiveLiveRoom] = useState<LiveRoom | null>(null);
+  const [showCreateLiveModal, setShowCreateLiveModal] = useState(false);
   
   // Call simulation state
   const [activeCallCreator, setActiveCallCreator] = useState<UserProfile | null>(null);
@@ -42,6 +56,31 @@ export default function App() {
 
   // Direct chat shortcuts
   const [activeCreatorChatId, setActiveCreatorChatId] = useState<string | null>(null);
+
+  // Followed creator IDs tracking
+  const [followedCreatorIds, setFollowedCreatorIds] = useState<string[]>([]);
+
+  const handleFollowCreator = (creatorId: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    
+    // Toggle follow in creators list
+    setCreators(prev => prev.map(c => {
+      if (c.id === creatorId) {
+        const isCurrentlyFollowing = followedCreatorIds.includes(creatorId);
+        return {
+          ...c,
+          followersCount: isCurrentlyFollowing ? Math.max(0, c.followersCount - 1) : c.followersCount + 1
+        };
+      }
+      return c;
+    }));
+    
+    if (followedCreatorIds.includes(creatorId)) {
+      setFollowedCreatorIds(prev => prev.filter(id => id !== creatorId));
+    } else {
+      setFollowedCreatorIds(prev => [...prev, creatorId]);
+    }
+  };
 
   // In-app notifications
   const [notifications, setNotifications] = useState<{ id: string; message: string; type: 'info' | 'success' | 'live' }[]>([]);
@@ -59,6 +98,9 @@ export default function App() {
         setTransactions(data.transactions);
         setWithdrawals(data.withdrawals);
         setStats(data.stats);
+        if (data.adminCallStats) {
+          setAdminCallStats(data.adminCallStats);
+        }
       }
     } catch (err) {
       console.error('Error fetching Livo Live initial state:', err);
@@ -104,12 +146,12 @@ export default function App() {
   };
 
   // 2. DEDUCT COINS (calls or gifts)
-  const handleDeductCoins = async (coins: number, type: 'gift_sent' | 'call_made', description: string, callback?: () => void) => {
+  const handleDeductCoins = async (coins: number, type: 'gift_sent' | 'call_made', description: string, creatorId?: string, callback?: () => void) => {
     try {
       const res = await fetch('/api/deduct-coins', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ coins, type, description })
+        body: JSON.stringify({ coins, type, description, creatorId })
       });
       if (res.ok) {
         await fetchGlobalState();
@@ -137,6 +179,66 @@ export default function App() {
       } else {
         const data = await res.json();
         alert(data.error || 'Failed to send virtual gift.');
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  // 3a. UNLOCK PRIVATE LIVE
+  const handleUnlockPrivateLive = async (creator: UserProfile) => {
+    if (!user) return;
+    if (user.coins < 1000) {
+      alert(`⚠️ You need 1,000 coins to unlock ${creator.name}'s Private Live Stream. Current balance: 🪙 ${user.coins}`);
+      return;
+    }
+    try {
+      const res = await fetch('/api/deduct-coins', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          coins: 1000, 
+          type: 'private_live', 
+          creatorId: creator.id, 
+          description: `Unlocked 1-on-1 Private Live Stream with ${creator.name}`
+        })
+      });
+      if (res.ok) {
+        await fetchGlobalState();
+        alert(`🎉 Success! You have unlocked a Private 1-on-1 Live Stream with ${creator.name}. She will contact you directly via DMs to schedule your private call session.`);
+      } else {
+        const data = await res.json();
+        alert(data.error || 'Failed to unlock Private Live.');
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  // 3b. UNLOCK PREMIUM CONTENT
+  const handleUnlockPremiumContent = async (creator: UserProfile) => {
+    if (!user) return;
+    if (user.coins < 500) {
+      alert(`⚠️ You need 500 coins to unlock ${creator.name}'s Premium Photo Album. Current balance: 🪙 ${user.coins}`);
+      return;
+    }
+    try {
+      const res = await fetch('/api/deduct-coins', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          coins: 500, 
+          type: 'premium_content', 
+          creatorId: creator.id, 
+          description: `Unlocked Premium Album Content for ${creator.name}`
+        })
+      });
+      if (res.ok) {
+        await fetchGlobalState();
+        alert(`🎉 Success! You unlocked ${creator.name}'s Exclusive VIP Album Photos. Check out her private feed & messages for premium high-resolution media.`);
+      } else {
+        const data = await res.json();
+        alert(data.error || 'Failed to unlock Premium Content.');
       }
     } catch (err) {
       console.error(err);
@@ -283,6 +385,15 @@ export default function App() {
     }
   };
 
+  const handleRoleChanged = (newRole: 'user' | 'admin' | 'superadmin') => {
+    setUser(prev => prev ? { ...prev, role: newRole } : null);
+    if (newRole === 'user' && activeTab === 'admin') {
+      setActiveTab('profile');
+    } else if ((newRole === 'admin' || newRole === 'superadmin') && activeTab === 'profile') {
+      setActiveTab('admin');
+    }
+  };
+
   if (!user) {
     return (
       <div className="min-h-screen bg-[#090909] text-white flex items-center justify-center font-sans">
@@ -391,54 +502,105 @@ export default function App() {
           
           {/* TAB A: ACTIVE LIVE STREAMING ROOMS */}
           {activeTab === 'live' && (
-            <div className="w-full h-full p-4 overflow-y-auto pb-20 scrollbar-none">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-white text-xs font-black uppercase tracking-wider flex items-center gap-1.5">
-                  <Tv className="w-4 h-4 text-pink-500" /> Live Broadcasters
-                </h3>
-                <span className="text-[8px] bg-red-500/10 text-red-400 border border-red-500/20 rounded px-1.5 py-0.5 uppercase tracking-widest font-black flex items-center gap-1 animate-pulse">
-                  ● Live Status
+            <div className="w-full h-full relative">
+              <div className="w-full h-full p-4 overflow-y-auto pb-20 scrollbar-none">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-white text-xs font-black uppercase tracking-wider flex items-center gap-1.5">
+                    <Tv className="w-4 h-4 text-pink-500" /> Live Broadcasters
+                  </h3>
+                  <span className="text-[8px] bg-red-500/10 text-red-400 border border-red-500/20 rounded px-1.5 py-0.5 uppercase tracking-widest font-black flex items-center gap-1 animate-pulse">
+                    ● Live Status
+                  </span>
+                </div>
+
+                {/* Grid of streaming channels */}
+                <div className="grid grid-cols-2 gap-3.5">
+                  {rooms.map((room) => (
+                    <div 
+                      key={room.id}
+                      onClick={() => setActiveLiveRoom(room)}
+                      className="bg-[#0D0D0D] rounded-3xl overflow-hidden border border-white/10 relative group cursor-pointer hover:border-pink-500/25 active:scale-[0.98] transition flex flex-col justify-between"
+                    >
+                      <div>
+                        <div className="relative">
+                          <img src={room.coverImage || room.creatorAvatar} className="w-full h-32 object-cover" alt="" />
+                          
+                          {/* Heart overlays or viewer count banner */}
+                          <div className="absolute top-2.5 left-2.5 bg-pink-600 text-white text-[8px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider">
+                            Live
+                          </div>
+
+                          <div className="absolute top-2.5 right-2.5 bg-black/45 backdrop-blur-md p-0.5 px-2 rounded-full text-[8px] font-bold text-white flex items-center gap-1">
+                            <Users className="w-2.5 h-2.5" /> {room.viewerCount.toLocaleString()}
+                          </div>
+                        </div>
+
+                        <div className="p-2.5 text-left pb-1">
+                          <h4 className="text-white font-bold text-[10.5px] leading-tight truncate">{room.creatorName}</h4>
+                          <p className="text-[9px] text-slate-300 truncate mt-0.5 font-medium">{room.title || 'Welcome to my live stream! ✨'}</p>
+                          
+                          <div className="flex justify-between items-center mt-1.5 border-t border-white/5 pt-1.5">
+                            <span className="text-[7.5px] text-slate-400 bg-white/5 px-1.5 py-0.5 rounded truncate max-w-[50px]">{room.tags[0] || 'Chat'}</span>
+                            <span className="text-pink-400 font-bold text-[8px] flex items-center gap-0.5 truncate max-w-[70px]">
+                              {room.creatorCountry}
+                            </span>
+                          </div>
+
+                          {/* Voice and Video Call Rates */}
+                          {(() => {
+                            const creator = creators.find(c => c.id === room.creatorId);
+                            const voiceRate = creator?.voiceCallRate || 5;
+                            const videoRate = creator?.videoCallRate || 15;
+                            return (
+                              <div className="flex gap-2 items-center mt-1.5 text-[7.5px] font-mono text-slate-500 font-bold">
+                                <span className="flex items-center gap-0.5">🎙️ {voiceRate}/m</span>
+                                <span>•</span>
+                                <span className="flex items-center gap-0.5">📹 {videoRate}/m</span>
+                              </div>
+                            );
+                          })()}
+                        </div>
+                      </div>
+
+                      <div className="p-2.5 pt-0">
+                        <button
+                          type="button"
+                          onClick={(e) => handleFollowCreator(room.creatorId, e)}
+                          className={`w-full py-1.5 rounded-xl text-[8px] uppercase tracking-wider font-extrabold transition active:scale-95 flex items-center justify-center gap-1 cursor-pointer ${
+                            followedCreatorIds.includes(room.creatorId)
+                              ? 'bg-slate-800 text-slate-400 border border-white/5'
+                              : 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow shadow-pink-500/20'
+                          }`}
+                        >
+                          {followedCreatorIds.includes(room.creatorId) ? '✓ Following' : '+ Follow'}
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 bg-[#0D0D0D]/40 p-4 rounded-3xl border border-white/5 text-center max-w-xs mx-auto">
+                  <span className="text-yellow-400 font-bold text-xs uppercase flex items-center gap-1 justify-center mb-1">
+                    <Sparkles className="w-4 h-4" /> VIP Privilege Info
+                  </span>
+                  <p className="text-[8.5px] leading-relaxed text-slate-400">
+                    Approved host certification remains high. Only certified creators can broadcast. Click any grid card to join!
+                  </p>
+                </div>
+              </div>
+
+              {/* Floating Action Button (FAB) in the bottom-right corner */}
+              <button
+                type="button"
+                onClick={() => setShowCreateLiveModal(true)}
+                className="absolute bottom-6 right-6 z-30 bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white rounded-full p-4.5 shadow-xl shadow-pink-500/40 active:scale-95 hover:scale-105 transition-all flex items-center justify-center border border-white/10 group cursor-pointer"
+                title="Go Live"
+              >
+                <Video className="w-5.5 h-5.5 stroke-[2.5]" />
+                <span className="absolute right-full mr-2 px-2.5 py-1 bg-black/90 backdrop-blur-md border border-white/15 rounded-lg text-[8px] uppercase tracking-wider font-extrabold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                  Go Live Now! 🚀
                 </span>
-              </div>
-
-              {/* Grid of streaming channels */}
-              <div className="grid grid-cols-2 gap-3.5">
-                {rooms.map((room) => (
-                  <div 
-                    key={room.id}
-                    onClick={() => setActiveLiveRoom(room)}
-                    className="bg-[#0D0D0D] rounded-3xl overflow-hidden border border-white/10 relative group cursor-pointer hover:border-pink-500/25 active:scale-[0.98] transition"
-                  >
-                    <img src={room.coverImage} className="w-full h-32 object-cover" alt="" />
-                    
-                    {/* Heart overlays or viewer count banner */}
-                    <div className="absolute top-2.5 left-2.5 bg-pink-600 text-white text-[8px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider">
-                      Live
-                    </div>
-
-                    <div className="absolute top-2.5 right-2.5 bg-black/45 backdrop-blur-md p-0.5 px-2 rounded-full text-[8px] font-bold text-white flex items-center gap-1">
-                      <Users className="w-2.5 h-2.5" /> {room.viewerCount.toLocaleString()}
-                    </div>
-
-                    <div className="p-2.5 text-left">
-                      <h4 className="text-white font-bold text-[10.5px] leading-tight truncate">{room.creatorName}</h4>
-                      <p className="text-[8.5px] text-slate-400 mt-1 flex justify-between items-center">
-                        <span className="truncate">{room.tags[0] || 'Chat'}</span>
-                        <span className="text-pink-400 font-bold font-mono">{room.creatorCountry}</span>
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 bg-[#0D0D0D]/40 p-4 rounded-3xl border border-white/5 text-center max-w-xs mx-auto">
-                <span className="text-yellow-400 font-bold text-xs uppercase flex items-center gap-1 justify-center mb-1">
-                  <Sparkles className="w-4 h-4" /> VIP Privilege Info
-                </span>
-                <p className="text-[8.5px] leading-relaxed text-slate-400">
-                  Approved host certification remains high. Only certified creators can broadcast. Click any grid card to join!
-                </p>
-              </div>
+              </button>
             </div>
           )}
 
@@ -493,6 +655,7 @@ export default function App() {
               stats={stats}
               withdrawals={withdrawals}
               onSubmitWithdrawal={handleSubmitWithdrawal}
+              rooms={rooms}
             />
           )}
 
@@ -505,6 +668,24 @@ export default function App() {
               onVerifyCreator={handleVerifyCreator}
               onSuspendUser={handleSuspendUser}
               onApproveWithdrawal={handleApproveWithdrawal}
+              onRefreshState={fetchGlobalState}
+            />
+          )}
+
+          {/* TAB H: USER PROFILE & SETTINGS PORTAL */}
+          {activeTab === 'profile' && user && (
+            <ProfileView 
+              user={user}
+              transactions={transactions}
+              onRoleChanged={handleRoleChanged}
+              onUserUpdated={(updatedUser) => {
+                setUser(updatedUser);
+                setCreators(prev => prev.map(c => c.id === updatedUser.id ? { ...c, ...updatedUser } : c));
+              }}
+              onNavigateToTab={(tab) => {
+                setActiveTab(tab);
+                setSelectedCreatorProfile(null);
+              }}
             />
           )}
 
@@ -513,14 +694,14 @@ export default function App() {
         {/* BOTTOM NAVIGATION TAB CONTROLS (Material 3 style) */}
         <div className="bg-[#0D0D0D] border-t border-white/10 p-2 px-3 flex justify-between items-center z-35 relative select-none">
           
-          {/* Nav Item A: Live Streams */}
+          {/* Nav Item A: Live Streams (Camera Icon) */}
           <button 
             onClick={() => { setActiveTab('live'); setSelectedCreatorProfile(null); }}
             className={`flex flex-col items-center gap-1 py-1 px-2.5 rounded-xl transition ${
               activeTab === 'live' ? 'text-pink-500' : 'text-slate-400 hover:text-white'
             }`}
           >
-            <Tv className="w-4 h-4" />
+            <Video className="w-4 h-4" />
             <span className="text-[7.5px] font-bold uppercase tracking-wider">Live</span>
           </button>
 
@@ -568,16 +749,28 @@ export default function App() {
             <span className="text-[7.5px] font-bold uppercase tracking-wider">Studio</span>
           </button>
 
-          {/* Nav Item F: Super Admin */}
-          <button 
-            onClick={() => { setActiveTab('admin'); setSelectedCreatorProfile(null); }}
-            className={`flex flex-col items-center gap-1 py-1 px-2.5 rounded-xl transition ${
-              activeTab === 'admin' ? 'text-red-500' : 'text-slate-500 hover:text-white'
-            }`}
-          >
-            <Shield className="w-4 h-4" />
-            <span className="text-[7.5px] font-bold uppercase tracking-wider">Admin</span>
-          </button>
+          {/* Nav Item F: Super Admin / Profile */}
+          {user.role === 'admin' || user.role === 'superadmin' ? (
+            <button 
+              onClick={() => { setActiveTab('admin'); setSelectedCreatorProfile(null); }}
+              className={`flex flex-col items-center gap-1 py-1 px-2.5 rounded-xl transition ${
+                activeTab === 'admin' ? 'text-red-500' : 'text-slate-500 hover:text-white'
+              }`}
+            >
+              <Shield className="w-4 h-4" />
+              <span className="text-[7.5px] font-bold uppercase tracking-wider">Admin</span>
+            </button>
+          ) : (
+            <button 
+              onClick={() => { setActiveTab('profile'); setSelectedCreatorProfile(null); }}
+              className={`flex flex-col items-center gap-1 py-1 px-2.5 rounded-xl transition ${
+                activeTab === 'profile' ? 'text-pink-500' : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              <User className="w-4 h-4" />
+              <span className="text-[7.5px] font-bold uppercase tracking-wider">Profile</span>
+            </button>
+          )}
 
         </div>
 
@@ -682,6 +875,53 @@ export default function App() {
                   </button>
                 </div>
 
+                {/* Premium Services */}
+                <div className="mb-5 bg-white/5 p-3 rounded-2xl border border-white/10">
+                  <span className="text-yellow-400 text-[8px] uppercase tracking-wider font-extrabold flex items-center gap-1 mb-2.5">
+                    <Sparkles className="w-3.5 h-3.5 animate-pulse text-amber-400" /> Approved Premium Services
+                  </span>
+                  
+                  <div className="grid grid-cols-2 gap-2.5">
+                    
+                    {/* Private Live Button */}
+                    <button 
+                      onClick={() => {
+                        setSelectedCreatorProfile(null);
+                        handleUnlockPrivateLive(selectedCreatorProfile);
+                      }}
+                      className="bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-xl p-2.5 text-left flex flex-col justify-between h-20 transition hover:opacity-95 active:scale-[0.98] border border-orange-500/30 cursor-pointer"
+                    >
+                      <div className="flex justify-between items-start w-full">
+                        <span className="text-[9px] uppercase font-black tracking-wide">Private Live</span>
+                        <Flame className="w-3.5 h-3.5 text-amber-300" />
+                      </div>
+                      <div>
+                        <span className="text-[8px] text-amber-200 block font-bold">1-on-1 VIP Stream</span>
+                        <span className="text-[10px] font-extrabold font-mono mt-0.5 block">🪙 1,000 Coins</span>
+                      </div>
+                    </button>
+
+                    {/* Premium Content Button */}
+                    <button 
+                      onClick={() => {
+                        setSelectedCreatorProfile(null);
+                        handleUnlockPremiumContent(selectedCreatorProfile);
+                      }}
+                      className="bg-gradient-to-r from-[#FF007A] to-purple-600 text-white rounded-xl p-2.5 text-left flex flex-col justify-between h-20 transition hover:opacity-95 active:scale-[0.98] border border-[#FF007A]/30 cursor-pointer"
+                    >
+                      <div className="flex justify-between items-start w-full">
+                        <span className="text-[9px] uppercase font-black tracking-wide">Premium Media</span>
+                        <Star className="w-3.5 h-3.5 text-pink-300" />
+                      </div>
+                      <div>
+                        <span className="text-[8px] text-pink-200 block font-bold font-bold">Exclusive Photos</span>
+                        <span className="text-[10px] font-extrabold font-mono mt-0.5 block">🪙 500 Coins</span>
+                      </div>
+                    </button>
+
+                  </div>
+                </div>
+
                 {/* Uploaded Gallery listings */}
                 <div>
                   <h4 className="text-slate-400 text-[8px] uppercase tracking-wider font-bold mb-2">Host Media Stream Gallery</h4>
@@ -705,12 +945,18 @@ export default function App() {
             <LiveRoomView 
               room={activeLiveRoom}
               user={user}
+              creators={creators}
               onClose={() => {
                 setActiveLiveRoom(null);
                 fetchGlobalState(); // reload coins and metrics
               }}
               onDeductCoins={handleDeductCoins}
               onReport={handleReport}
+              onStartCall={(creator, type) => {
+                setActiveCallCreator(creator);
+                setActiveCallType(type);
+              }}
+              onOpenUserProfile={(creator) => setActiveUserProfile(creator)}
             />
           )}
         </AnimatePresence>
@@ -724,6 +970,55 @@ export default function App() {
               callType={activeCallType}
               onDeductCoins={handleDeductCoins}
               onClose={handleCallFinished}
+            />
+          )}
+        </AnimatePresence>
+
+        {/* 4. CREATE LIVE ROOM FORM MODAL OVERLAY */}
+        <AnimatePresence>
+          {showCreateLiveModal && (
+            <CreateLiveRoomModal 
+              user={user}
+              onClose={() => setShowCreateLiveModal(false)}
+              onRoomCreated={(newRoom) => {
+                setShowCreateLiveModal(false);
+                setActiveLiveRoom(newRoom);
+                fetchGlobalState(); // Fetch newly created room instantly!
+              }}
+            />
+          )}
+        </AnimatePresence>
+
+        {/* 5. FULLSCREEN USER PROFILE OVERLAY VIEW */}
+        <AnimatePresence>
+          {activeUserProfile && user && (
+            <UserProfileView 
+              creator={activeUserProfile}
+              currentUser={user}
+              onClose={() => setActiveUserProfile(null)}
+              onSendMessage={(creatorId) => {
+                setActiveUserProfile(null);
+                setActiveLiveRoom(null); // Leave live room on DM transition
+                setActiveTab('messages');
+                setActiveCreatorChatId(creatorId);
+              }}
+              onStartCall={(creator, type) => {
+                setActiveCallCreator(creator);
+                setActiveCallType(type);
+              }}
+              onReport={handleReport}
+              onSendGiftDirect={(creatorId, gift) => {
+                handleDeductCoins(
+                  gift.coinValue,
+                  'gift_sent',
+                  `Sent ${gift.icon} ${gift.name} from User Profile`,
+                  creatorId,
+                  () => {
+                    // Update creators local state / user balance after send
+                    fetchGlobalState();
+                  }
+                );
+              }}
             />
           )}
         </AnimatePresence>

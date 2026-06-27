@@ -1,0 +1,114 @@
+{
+  "entities": {
+    "RoomImage": {
+      "title": "RoomImage",
+      "description": "An image uploaded to a live room",
+      "type": "object",
+      "properties": {
+        "imageUrl": {
+          "type": "string",
+          "description": "The URL of the image stored in Firebase Storage"
+        },
+        "uploadedAt": {
+          "type": "string",
+          "description": "ISO timestamp representing when the image was uploaded"
+        }
+      },
+      "required": ["imageUrl", "uploadedAt"]
+    },
+    "BackgroundMusic": {
+      "title": "BackgroundMusic",
+      "description": "Background music settings for a live room",
+      "type": "object",
+      "properties": {
+        "fileName": {
+          "type": "string",
+          "description": "Name of the audio file"
+        },
+        "audioUrl": {
+          "type": "string",
+          "description": "URL of the audio file stored in Firebase Storage"
+        },
+        "duration": {
+          "type": "number",
+          "description": "Duration of the audio file in seconds"
+        },
+        "isPlaying": {
+          "type": "boolean",
+          "description": "Whether the music is currently playing"
+        },
+        "loop": {
+          "type": "boolean",
+          "description": "Whether the music should loop playback"
+        }
+      },
+      "required": ["fileName", "audioUrl", "duration", "isPlaying", "loop"]
+    },
+    "LiveRoomSettings": {
+      "title": "LiveRoomSettings",
+      "description": "State structure of a live room settings",
+      "type": "object",
+      "properties": {
+        "roomId": {
+          "type": "string",
+          "description": "The unique identifier of the live room"
+        },
+        "images": {
+          "type": "array",
+          "description": "List of uploaded images (maximum 10)",
+          "items": {
+            "$ref": "#/entities/RoomImage"
+          }
+        },
+        "backgroundMusic": {
+          "$ref": "#/entities/BackgroundMusic"
+        }
+      },
+      "required": ["roomId"]
+    },
+    "DemoUser": {
+      "title": "DemoUser",
+      "description": "A demo broadcaster profile document",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "username": { "type": "string" },
+        "name": { "type": "string" },
+        "bio": { "type": "string" },
+        "country": { "type": "string" },
+        "age": { "type": "number" },
+        "language": { "type": "string" },
+        "followersCount": { "type": "number" },
+        "followingCount": { "type": "number" },
+        "coins": { "type": "number" },
+        "level": { "type": "number" },
+        "isVIP": { "type": "boolean" },
+        "isApprovedCreator": { "type": "boolean" },
+        "onlineStatus": { "type": "string" },
+        "isLive": { "type": "boolean" },
+        "avatar": { "type": "string" },
+        "coverPhoto": { "type": "string" },
+        "mediaGallery": {
+          "type": "object",
+          "properties": {
+            "photos": { "type": "array", "items": { "type": "string" } },
+            "videos": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "voiceCallRate": { "type": "number" },
+        "videoCallRate": { "type": "number" }
+      },
+      "required": ["userId", "username", "name", "bio", "country", "age", "language", "followersCount", "followingCount", "coins", "level", "isVIP", "isApprovedCreator", "onlineStatus", "isLive", "avatar", "coverPhoto"]
+    }
+  },
+  "firestore": {
+    "live_rooms/{roomId}": {
+      "schema": "LiveRoomSettings",
+      "description": "Collection storing the active images and background music state of each live room"
+    },
+    "demo_users/{userId}": {
+      "schema": "DemoUser",
+      "description": "Collection of all 100 realistic demo broadcaster accounts for testing purposes"
+    }
+  }
+}

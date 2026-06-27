@@ -156,6 +156,11 @@ export default function ExploreView({ creators, rooms, onSelectCreator, onJoinRo
                     <span>•</span>
                     <span>{creator.age} yrs</span>
                   </p>
+                  <p className="text-[8px] text-pink-400 font-bold font-mono mt-1 flex items-center gap-1 bg-[#FF007A]/10 border border-[#FF007A]/15 rounded-md px-1.5 py-0.5 w-fit">
+                    <span>📞 {creator.voiceCallRate ?? 1} / min</span>
+                    <span>•</span>
+                    <span>📹 {creator.videoCallRate ?? 5} / min</span>
+                  </p>
                 </div>
               </div>
 

@@ -22,10 +22,29 @@ export interface UserProfile {
   vipExpiry?: string;
   onlineStatus: 'online' | 'offline' | 'busy';
   isApprovedCreator: boolean;
+  role?: 'user' | 'admin' | 'superadmin';
+  voiceCallRate?: number;
+  videoCallRate?: number;
+  lastRateUpdated?: string;
   mediaGallery: {
     photos: string[];
     videos: string[];
   };
+}
+
+export interface CallHistoryRecord {
+  id?: string;
+  callId: string;
+  callerId: string;
+  receiverId: string;
+  callType: 'voice' | 'video';
+  startedAt: string; // ISO String
+  endedAt: string; // ISO String
+  duration: number; // in seconds
+  coinsCharged: number;
+  status: 'completed' | 'missed' | 'cancelled';
+  receiverEarned?: number;
+  adminEarned?: number;
 }
 
 export interface Post {
@@ -59,6 +78,21 @@ export interface Gift {
   animationType: 'rose-shower' | 'heart-pulse' | 'diamond-ring' | 'royal-crown' | 'ferrari-drive' | 'yacht-cruise' | 'lion-roar' | 'rocket-launch';
 }
 
+export interface RoomImage {
+  imageUrl: string;
+  uploadedAt: string; // ISO format or timestamp
+  selected?: boolean;
+}
+
+export interface BackgroundMusicState {
+  fileName: string;
+  audioUrl: string;
+  duration: number;
+  isPlaying: boolean;
+  loop: boolean;
+  volume?: number;
+}
+
 export interface LiveRoom {
   id: string;
   creatorId: string;
@@ -69,6 +103,20 @@ export interface LiveRoom {
   likesCount: number;
   coverImage: string;
   tags: string[];
+  title?: string;
+  bio?: string;
+  category?: string;
+  privacy?: string;
+  password?: string;
+  language?: string;
+  allowGuestJoin?: boolean;
+  allowGifts?: boolean;
+  allowComments?: boolean;
+  beautyFilter?: boolean;
+  locationSharing?: string;
+  scheduledTime?: string;
+  images?: RoomImage[];
+  backgroundMusic?: BackgroundMusicState | null;
   pkBattle?: {
     opponentId: string;
     opponentName: string;
@@ -146,5 +194,10 @@ export interface CreatorStats {
   liveEarningsCoins: number;
   callEarningsCoins: number;
   giftEarningsCoins: number;
+  privateLiveEarningsCoins: number;
+  premiumContentEarningsCoins: number;
+  dailyEarningsCoins: number;
+  weeklyEarningsCoins: number;
+  monthlyEarningsCoins: number;
   pendingWithdrawalsCoins: number;
 }

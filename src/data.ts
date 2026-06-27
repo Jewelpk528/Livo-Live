@@ -4,6 +4,7 @@
  */
 
 import { UserProfile, Gift, LiveRoom, Post, Transaction, WithdrawalRequest, CreatorStats } from './types';
+import { DEMO_CREATORS } from './demoUsers';
 
 export const GIFTS: Gift[] = [
   { id: 'gift_rose', name: 'Rose', icon: '🌹', coinValue: 1, animationType: 'rose-shower' },
@@ -31,13 +32,79 @@ export const VIP_PLANS = [
   { id: 'vip_yearly', name: 'Yearly VIP', price: 89.99, priceBDT: 9000, coinsBonus: 10000, period: 'year', benefits: ['VIP Badge on Profile', 'Exclusive Sparkle Gift Access', 'Priority Direct Messaging', 'Profile Boost in Search', 'Ad-Free Streaming Stream', '5x Daily Login Bonus multiplier', 'Special Entrance Announcement Animation'] }
 ];
 
+// Map 100 Demo creators to UserProfile structure
+const mappedDemoCreators: UserProfile[] = DEMO_CREATORS.map(c => ({
+  id: c.profile.userId,
+  name: c.profile.displayName,
+  uid: c.profile.userId.replace('LV', ''),
+  avatar: c.profile.profilePhotoUrl,
+  coverPhoto: c.profile.coverPhotoUrl,
+  gender: c.profile.gender === 'other' ? 'female' : c.profile.gender,
+  age: c.profile.age,
+  country: c.profile.country,
+  bio: c.profile.shortBio,
+  followersCount: c.profile.followers,
+  followingCount: c.profile.following,
+  coins: c.profile.coinsBalance,
+  level: c.profile.level,
+  isVIP: c.profile.vipStatus.includes('VIP'),
+  onlineStatus: c.liveRoom.currentStatus === 'Live' ? 'online' : 'offline',
+  isApprovedCreator: true,
+  voiceCallRate: c.profile.level > 20 ? 10 : c.profile.level > 10 ? 8 : 5,
+  videoCallRate: c.profile.level > 20 ? 25 : c.profile.level > 10 ? 18 : 15,
+  mediaGallery: {
+    photos: c.media.photoTitles.map((title, idx) => {
+      const photoIds = [
+        'photo-1524504388940-b1c1722653e1',
+        'photo-1534528741775-53994a69daeb',
+        'photo-1494790108377-be9c29b29330',
+        'photo-1544005313-94ddf0286df2',
+        'photo-1517841905240-472988babdf9'
+      ];
+      return `https://images.unsplash.com/${photoIds[idx % photoIds.length]}?auto=format&fit=crop&q=80&w=400&h=500`;
+    }),
+    videos: [
+      'https://assets.mixkit.co/videos/preview/mixkit-girl-in-neon-sign-with-headphones-singing-40348-large.mp4',
+      'https://assets.mixkit.co/videos/preview/mixkit-young-woman-vlogging-at-home-40346-large.mp4'
+    ]
+  }
+}));
+
+// Map 100 Demo live rooms to LiveRoom structure
+const mappedDemoRooms: LiveRoom[] = DEMO_CREATORS.filter(c => c.liveRoom.currentStatus === 'Live').map(c => ({
+  id: c.liveRoom.roomId,
+  creatorId: c.profile.userId,
+  creatorName: c.profile.displayName,
+  creatorAvatar: c.profile.profilePhotoUrl,
+  creatorCountry: c.profile.country,
+  viewerCount: c.liveRoom.totalViewers,
+  likesCount: Math.floor(c.liveRoom.totalFollowers / 3),
+  coverImage: c.profile.coverPhotoUrl,
+  tags: c.liveRoom.popularTags
+}));
+
+// Map 100 Demo creators to CreatorStats structure
+const mappedDemoStats: CreatorStats[] = DEMO_CREATORS.map(c => ({
+  creatorId: c.profile.userId,
+  totalEarningsCoins: c.profile.totalGiftsReceived,
+  liveEarningsCoins: Math.floor(c.profile.totalGiftsReceived * 0.4),
+  callEarningsCoins: Math.floor(c.profile.totalVideoCalls * 30),
+  giftEarningsCoins: Math.floor(c.profile.totalGiftsReceived * 0.3),
+  privateLiveEarningsCoins: Math.floor(c.profile.totalGiftsReceived * 0.2),
+  premiumContentEarningsCoins: Math.floor(c.profile.totalGiftsReceived * 0.1),
+  dailyEarningsCoins: Math.floor(c.profile.totalGiftsReceived / 30),
+  weeklyEarningsCoins: Math.floor(c.profile.totalGiftsReceived / 7),
+  monthlyEarningsCoins: Math.floor(c.profile.totalGiftsReceived / 2),
+  pendingWithdrawalsCoins: 0
+}));
+
 export const INITIAL_CREATORS: UserProfile[] = [
   {
     id: 'creator_sophia',
     name: 'Sophia BD',
     uid: '100912',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200&h=200',
-    coverPhoto: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=600&h=300',
+    avatar: 'https://images.unsplash.com/photo-1618015358954-115ef1ed6515?auto=format&fit=crop&q=80&w=250&h=250',
+    coverPhoto: 'https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?auto=format&fit=crop&q=80&w=600&h=450',
     gender: 'female',
     age: 21,
     country: 'Bangladesh',
@@ -52,9 +119,9 @@ export const INITIAL_CREATORS: UserProfile[] = [
     isApprovedCreator: true,
     mediaGallery: {
       photos: [
-        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=400&h=500',
-        'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400&h=500',
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400&h=500'
+        'https://images.unsplash.com/photo-1618015358954-115ef1ed6515?auto=format&fit=crop&q=80&w=400&h=500',
+        'https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?auto=format&fit=crop&q=80&w=400&h=500',
+        'https://images.unsplash.com/photo-1620932934088-fbdb2920e484?auto=format&fit=crop&q=80&w=400&h=500'
       ],
       videos: [
         'https://assets.mixkit.co/videos/preview/mixkit-girl-in-neon-sign-with-headphones-singing-40348-large.mp4',
@@ -64,14 +131,14 @@ export const INITIAL_CREATORS: UserProfile[] = [
   },
   {
     id: 'creator_emma',
-    name: 'Emma Rose',
+    name: 'Ananya Sharma',
     uid: '201103',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200',
-    coverPhoto: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=600&h=300',
+    avatar: 'https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=250&h=250',
+    coverPhoto: 'https://images.unsplash.com/photo-1630156984285-d60927a7c933?auto=format&fit=crop&q=80&w=600&h=450',
     gender: 'female',
     age: 23,
-    country: 'Singapore',
-    bio: 'Professional dancer and makeup influencer. Let\'s chat and stream. Open for PK battles ⚡️ Daily streaming hour: 6 PM GMT.',
+    country: 'India',
+    bio: 'Classical and Bollywood dancer. Let\'s chat and stream. Open for PK battles ⚡️ Daily streaming hour: 6 PM GMT.',
     followersCount: 28900,
     followingCount: 95,
     coins: 1200,
@@ -82,8 +149,8 @@ export const INITIAL_CREATORS: UserProfile[] = [
     isApprovedCreator: true,
     mediaGallery: {
       photos: [
-        'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400&h=500',
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400&h=500'
+        'https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=400&h=500',
+        'https://images.unsplash.com/photo-1630156984285-d60927a7c933?auto=format&fit=crop&q=80&w=400&h=500'
       ],
       videos: [
         'https://assets.mixkit.co/videos/preview/mixkit-young-woman-with-goggles-smiling-at-camera-39981-large.mp4'
@@ -92,14 +159,14 @@ export const INITIAL_CREATORS: UserProfile[] = [
   },
   {
     id: 'creator_elena',
-    name: 'Elena Kiev',
+    name: 'Kriti Tamang',
     uid: '300452',
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=200&h=200',
-    coverPhoto: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=600&h=300',
+    avatar: 'https://images.unsplash.com/photo-1562088287-bde35a1ea917?auto=format&fit=crop&q=80&w=250&h=250',
+    coverPhoto: 'https://images.unsplash.com/photo-1625897428517-7e2062829a26?auto=format&fit=crop&q=80&w=600&h=450',
     gender: 'female',
     age: 22,
-    country: 'Ukraine',
-    bio: 'Vocalist and model. Music is my soul. 🎙️ Join my stream, let\'s share positive vibes and dynamic stories! Global Rank #15.',
+    country: 'Nepal',
+    bio: 'Singer, guitarist and model from Kathmandu. Music is my soul. 🎙️ Join my stream, let\'s share positive vibes! Global Rank #15.',
     followersCount: 42100,
     followingCount: 310,
     coins: 720,
@@ -109,8 +176,8 @@ export const INITIAL_CREATORS: UserProfile[] = [
     isApprovedCreator: true,
     mediaGallery: {
       photos: [
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400&h=500',
-        'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&q=80&w=400&h=500'
+        'https://images.unsplash.com/photo-1562088287-bde35a1ea917?auto=format&fit=crop&q=80&w=400&h=500',
+        'https://images.unsplash.com/photo-1625897428517-7e2062829a26?auto=format&fit=crop&q=80&w=400&h=500'
       ],
       videos: []
     }
@@ -119,8 +186,8 @@ export const INITIAL_CREATORS: UserProfile[] = [
     id: 'creator_ayesha',
     name: 'Ayesha_Sylhet',
     uid: '105541',
-    avatar: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&q=80&w=200&h=200',
-    coverPhoto: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=600&h=300',
+    avatar: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=250&h=250',
+    coverPhoto: 'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&q=80&w=600&h=450',
     gender: 'female',
     age: 20,
     country: 'Bangladesh',
@@ -134,22 +201,22 @@ export const INITIAL_CREATORS: UserProfile[] = [
     isApprovedCreator: true,
     mediaGallery: {
       photos: [
-        'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&q=80&w=400&h=500',
-        'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400&h=500'
+        'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=400&h=500',
+        'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&q=80&w=400&h=500'
       ],
       videos: []
     }
   },
   {
     id: 'creator_jessica',
-    name: 'Jessica USA',
+    name: 'Hania Amir',
     uid: '401889',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200',
-    coverPhoto: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&q=80&w=600&h=300',
+    avatar: 'https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&q=80&w=250&h=250',
+    coverPhoto: 'https://images.unsplash.com/photo-1601412436009-d964bd02edbc?auto=format&fit=crop&q=80&w=600&h=450',
     gender: 'female',
     age: 24,
-    country: 'United States',
-    bio: 'Fitness and cooking streamer. Let\'s keep it energetic and fun! Call me for a custom workout tip 🥗 Global ambassador.',
+    country: 'Pakistan',
+    bio: 'Drama artist and vlogger. Let\'s keep it energetic and fun! Call me for a custom chat session 🎙️ Streaming live daily.',
     followersCount: 33400,
     followingCount: 198,
     coins: 5600,
@@ -160,12 +227,13 @@ export const INITIAL_CREATORS: UserProfile[] = [
     isApprovedCreator: true,
     mediaGallery: {
       photos: [
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400&h=500',
-        'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400&h=500'
+        'https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&q=80&w=400&h=500',
+        'https://images.unsplash.com/photo-1601412436009-d964bd02edbc?auto=format&fit=crop&q=80&w=400&h=500'
       ],
       videos: []
     }
-  }
+  },
+  ...mappedDemoCreators
 ];
 
 export const INITIAL_USER: UserProfile = {
@@ -187,6 +255,7 @@ export const INITIAL_USER: UserProfile = {
   vipExpiry: '2026-07-25',
   onlineStatus: 'online',
   isApprovedCreator: false,
+  role: 'superadmin',
   mediaGallery: {
     photos: [
       'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=400&h=500'
@@ -200,16 +269,16 @@ export const INITIAL_LIVEROOMS: LiveRoom[] = [
     id: 'room_sophia',
     creatorId: 'creator_sophia',
     creatorName: 'Sophia BD',
-    creatorAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200&h=200',
+    creatorAvatar: 'https://images.unsplash.com/photo-1618015358954-115ef1ed6515?auto=format&fit=crop&q=80&w=250&h=250',
     creatorCountry: 'Bangladesh',
     viewerCount: 2450,
     likesCount: 15400,
-    coverImage: 'https://images.unsplash.com/photo-1516280440614-37939bbacd6a?auto=format&fit=crop&q=80&w=400&h=300',
+    coverImage: 'https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?auto=format&fit=crop&q=80&w=600&h=450',
     tags: ['Bengali Songs', 'Chitchat', 'Trending'],
     pkBattle: {
       opponentId: 'creator_elena',
-      opponentName: 'Elena Kiev',
-      opponentAvatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=200&h=200',
+      opponentName: 'Kriti Tamang',
+      opponentAvatar: 'https://images.unsplash.com/photo-1562088287-bde35a1ea917?auto=format&fit=crop&q=80&w=250&h=250',
       userScore: 4200,
       opponentScore: 3800,
       timeRemaining: 120
@@ -218,17 +287,17 @@ export const INITIAL_LIVEROOMS: LiveRoom[] = [
   {
     id: 'room_emma',
     creatorId: 'creator_emma',
-    creatorName: 'Emma Rose',
-    creatorAvatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200',
-    creatorCountry: 'Singapore',
+    creatorName: 'Ananya Sharma',
+    creatorAvatar: 'https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=250&h=250',
+    creatorCountry: 'India',
     viewerCount: 4120,
     likesCount: 28900,
-    coverImage: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=400&h=300',
-    tags: ['K-Pop Dance', 'MakeUp', 'Hot 🔥'],
+    coverImage: 'https://images.unsplash.com/photo-1630156984285-d60927a7c933?auto=format&fit=crop&q=80&w=600&h=450',
+    tags: ['Kathak Dance', 'BollyJam', 'Hot 🔥'],
     multiGuest: {
       seats: [
-        { id: 'seat_1', userId: 'creator_sophia', userName: 'Sophia BD', userAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200&h=200', isMuted: false, isVideoOn: true },
-        { id: 'seat_2', userId: 'creator_ayesha', userName: 'Ayesha_Sylhet', userAvatar: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&q=80&w=200&h=200', isMuted: true, isVideoOn: true },
+        { id: 'seat_1', userId: 'creator_sophia', userName: 'Sophia BD', userAvatar: 'https://images.unsplash.com/photo-1618015358954-115ef1ed6515?auto=format&fit=crop&q=80&w=250&h=250', isMuted: false, isVideoOn: true },
+        { id: 'seat_2', userId: 'creator_ayesha', userName: 'Ayesha_Sylhet', userAvatar: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=250&h=250', isMuted: true, isVideoOn: true },
         { id: 'seat_3', userId: null, userName: null, userAvatar: null, isMuted: false, isVideoOn: false },
         { id: 'seat_4', userId: null, userName: null, userAvatar: null, isMuted: false, isVideoOn: false }
       ]
@@ -237,14 +306,15 @@ export const INITIAL_LIVEROOMS: LiveRoom[] = [
   {
     id: 'room_elena',
     creatorId: 'creator_elena',
-    creatorName: 'Elena Kiev',
-    creatorAvatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=200&h=200',
-    creatorCountry: 'Ukraine',
+    creatorName: 'Kriti Tamang',
+    creatorAvatar: 'https://images.unsplash.com/photo-1562088287-bde35a1ea917?auto=format&fit=crop&q=80&w=250&h=250',
+    creatorCountry: 'Nepal',
     viewerCount: 1980,
     likesCount: 8900,
-    coverImage: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=400&h=300',
-    tags: ['Live Guitar', 'English Pop', 'Cozy Vibes']
-  }
+    coverImage: 'https://images.unsplash.com/photo-1625897428517-7e2062829a26?auto=format&fit=crop&q=80&w=600&h=450',
+    tags: ['Live Guitar', 'Nepali Folk', 'Cozy Vibes']
+  },
+  ...mappedDemoRooms
 ];
 
 export const INITIAL_POSTS: Post[] = [
@@ -252,7 +322,7 @@ export const INITIAL_POSTS: Post[] = [
     id: 'post_p1',
     creatorId: 'creator_sophia',
     creatorName: 'Sophia BD',
-    creatorAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200&h=200',
+    creatorAvatar: 'https://images.unsplash.com/photo-1618015358954-115ef1ed6515?auto=format&fit=crop&q=80&w=250&h=250',
     type: 'video',
     content: 'Just practiced this new romantic song for tonight\'s stream! Who\'s coming to listen? 🌹❤️ #singing #livestream #bengali',
     mediaUrl: 'https://assets.mixkit.co/videos/preview/mixkit-girl-in-neon-sign-with-headphones-singing-40348-large.mp4',
@@ -268,15 +338,15 @@ export const INITIAL_POSTS: Post[] = [
   {
     id: 'post_p2',
     creatorId: 'creator_emma',
-    creatorName: 'Emma Rose',
-    creatorAvatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200',
+    creatorName: 'Ananya Sharma',
+    creatorAvatar: 'https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=250&h=250',
     type: 'photo',
-    content: 'Golden hour in Singapore! Hope everyone has an amazing week. Setting up for the PK battle tonight. Let\'s win this team! 💪✨',
-    mediaUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=600&h=500',
+    content: 'Golden hour in Mumbai! Hope everyone has an amazing week. Setting up for the PK battle tonight. Let\'s win this team! 💪✨',
+    mediaUrl: 'https://images.unsplash.com/photo-1630156984285-d60927a7c933?auto=format&fit=crop&q=80&w=600&h=500',
     likesCount: 2890,
     isLikedByUser: true,
     comments: [
-      { id: 'c3', userName: 'GifterPro', userAvatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100&h=100', content: 'We will support you with Yacht gifts Emma! Let\'s defeat the opponent!', timestamp: '5 hours ago' }
+      { id: 'c3', userName: 'GifterPro', userAvatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100&h=100', content: 'We will support you with Yacht gifts Ananya! Let\'s defeat the opponent!', timestamp: '5 hours ago' }
     ],
     sharesCount: 112,
     timestamp: '8 hours ago'
@@ -284,8 +354,8 @@ export const INITIAL_POSTS: Post[] = [
   {
     id: 'post_p3',
     creatorId: 'creator_elena',
-    creatorName: 'Elena Kiev',
-    creatorAvatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=200&h=200',
+    creatorName: 'Kriti Tamang',
+    creatorAvatar: 'https://images.unsplash.com/photo-1562088287-bde35a1ea917?auto=format&fit=crop&q=80&w=250&h=250',
     type: 'video',
     content: 'Weekend rehearsal vlog 🎻 Dynamic performance preparations for our next big stream event. Thank you for your support!',
     mediaUrl: 'https://assets.mixkit.co/videos/preview/mixkit-young-woman-with-goggles-smiling-at-camera-39981-large.mp4',
@@ -357,28 +427,44 @@ export const INITIAL_WITHDRAWALS: WithdrawalRequest[] = [
 export const INITIAL_STATS: CreatorStats[] = [
   {
     creatorId: 'creator_sophia',
-    totalEarningsCoins: 18500,
+    totalEarningsCoins: 22500,
     liveEarningsCoins: 9200,
     callEarningsCoins: 4300,
     giftEarningsCoins: 5000,
+    privateLiveEarningsCoins: 2500,
+    premiumContentEarningsCoins: 1500,
+    dailyEarningsCoins: 1200,
+    weeklyEarningsCoins: 6400,
+    monthlyEarningsCoins: 22500,
     pendingWithdrawalsCoins: 5000
   },
   {
     creatorId: 'creator_emma',
-    totalEarningsCoins: 45000,
+    totalEarningsCoins: 55000,
     liveEarningsCoins: 18000,
     callEarningsCoins: 15000,
     giftEarningsCoins: 12000,
+    privateLiveEarningsCoins: 6000,
+    premiumContentEarningsCoins: 4000,
+    dailyEarningsCoins: 3500,
+    weeklyEarningsCoins: 14500,
+    monthlyEarningsCoins: 55000,
     pendingWithdrawalsCoins: 0
   },
   {
     creatorId: 'creator_elena',
-    totalEarningsCoins: 12400,
+    totalEarningsCoins: 16400,
     liveEarningsCoins: 6200,
     callEarningsCoins: 3100,
     giftEarningsCoins: 3100,
+    privateLiveEarningsCoins: 2500,
+    premiumContentEarningsCoins: 1500,
+    dailyEarningsCoins: 800,
+    weeklyEarningsCoins: 4800,
+    monthlyEarningsCoins: 16400,
     pendingWithdrawalsCoins: 0
-  }
+  },
+  ...mappedDemoStats
 ];
 
 export const MOCK_CHAT_POOL = [
